@@ -89,11 +89,107 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\question-10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-10.Designer.cs">
+      <DependentUpon>question-10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question-11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-11.Designer.cs">
+      <DependentUpon>question-11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question-12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-12.Designer.cs">
+      <DependentUpon>question-12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question-13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-13.Designer.cs">
+      <DependentUpon>question-13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question-14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-14.Designer.cs">
+      <DependentUpon>question-14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question-15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-15.Designer.cs">
+      <DependentUpon>question-15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question-16.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-16.Designer.cs">
+      <DependentUpon>question-16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question-17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question-17.Designer.cs">
+      <DependentUpon>question-17.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\question1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vistas\question1.Designer.cs">
       <DependentUpon>question1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question2.Designer.cs">
+      <DependentUpon>question2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question3.Designer.cs">
+      <DependentUpon>question3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question4.Designer.cs">
+      <DependentUpon>question4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question5.Designer.cs">
+      <DependentUpon>question5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question6.Designer.cs">
+      <DependentUpon>question6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question7.Designer.cs">
+      <DependentUpon>question7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question8.Designer.cs">
+      <DependentUpon>question8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\question9.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\question9.Designer.cs">
+      <DependentUpon>question9.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -108,8 +204,56 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\question-10.resx">
+      <DependentUpon>question-10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question-11.resx">
+      <DependentUpon>question-11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question-12.resx">
+      <DependentUpon>question-12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question-13.resx">
+      <DependentUpon>question-13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question-14.resx">
+      <DependentUpon>question-14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question-15.resx">
+      <DependentUpon>question-15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question-16.resx">
+      <DependentUpon>question-16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question-17.resx">
+      <DependentUpon>question-17.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\question1.resx">
       <DependentUpon>question1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question2.resx">
+      <DependentUpon>question2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question3.resx">
+      <DependentUpon>question3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question4.resx">
+      <DependentUpon>question4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question5.resx">
+      <DependentUpon>question5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question6.resx">
+      <DependentUpon>question6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question7.resx">
+      <DependentUpon>question7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question8.resx">
+      <DependentUpon>question8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\question9.resx">
+      <DependentUpon>question9.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
