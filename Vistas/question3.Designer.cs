@@ -49,8 +49,7 @@
         series1};
             this.chartControl1.Size = new System.Drawing.Size(775, 454);
             this.chartControl1.TabIndex = 0;
-            chartTitle1.Text = "Sexo\r\n";
-            chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            chartTitle1.Text = "Sexo";
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
             // 
