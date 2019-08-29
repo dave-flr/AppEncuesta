@@ -50,6 +50,12 @@
             this.accordionControlElement42 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement43 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement50 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement51 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement52 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement53 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement54 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement55 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -85,12 +91,6 @@
             this.accordionControlElement47 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement48 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement49 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement50 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement51 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement52 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement53 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement54 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement55 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
@@ -287,6 +287,54 @@
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Preguntas de Desarrollo";
             // 
+            // accordionControlElement50
+            // 
+            this.accordionControlElement50.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement50.ImageOptions.Image")));
+            this.accordionControlElement50.Name = "accordionControlElement50";
+            this.accordionControlElement50.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement50.Text = "Pregunta #12";
+            this.accordionControlElement50.Click += new System.EventHandler(this.AccordionControlElement50_Click);
+            // 
+            // accordionControlElement51
+            // 
+            this.accordionControlElement51.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement51.ImageOptions.Image")));
+            this.accordionControlElement51.Name = "accordionControlElement51";
+            this.accordionControlElement51.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement51.Text = "Pregunta #13";
+            this.accordionControlElement51.Click += new System.EventHandler(this.AccordionControlElement51_Click);
+            // 
+            // accordionControlElement52
+            // 
+            this.accordionControlElement52.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement52.ImageOptions.Image")));
+            this.accordionControlElement52.Name = "accordionControlElement52";
+            this.accordionControlElement52.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement52.Text = "Pregunta #14";
+            this.accordionControlElement52.Click += new System.EventHandler(this.AccordionControlElement52_Click);
+            // 
+            // accordionControlElement53
+            // 
+            this.accordionControlElement53.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement53.ImageOptions.Image")));
+            this.accordionControlElement53.Name = "accordionControlElement53";
+            this.accordionControlElement53.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement53.Text = "Pregunta #15";
+            this.accordionControlElement53.Click += new System.EventHandler(this.AccordionControlElement53_Click);
+            // 
+            // accordionControlElement54
+            // 
+            this.accordionControlElement54.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement54.ImageOptions.Image")));
+            this.accordionControlElement54.Name = "accordionControlElement54";
+            this.accordionControlElement54.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement54.Text = "Pregunta #16";
+            this.accordionControlElement54.Click += new System.EventHandler(this.AccordionControlElement54_Click);
+            // 
+            // accordionControlElement55
+            // 
+            this.accordionControlElement55.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement55.ImageOptions.Image")));
+            this.accordionControlElement55.Name = "accordionControlElement55";
+            this.accordionControlElement55.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement55.Text = "Pregunta #17";
+            this.accordionControlElement55.Click += new System.EventHandler(this.AccordionControlElement55_Click);
+            // 
             // accordionControl1
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -470,48 +518,6 @@
             // accordionControlElement49
             // 
             this.accordionControlElement49.Name = "accordionControlElement49";
-            // 
-            // accordionControlElement50
-            // 
-            this.accordionControlElement50.Name = "accordionControlElement50";
-            this.accordionControlElement50.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement50.Text = "Pregunta #12";
-            this.accordionControlElement50.Click += new System.EventHandler(this.AccordionControlElement50_Click);
-            // 
-            // accordionControlElement51
-            // 
-            this.accordionControlElement51.Name = "accordionControlElement51";
-            this.accordionControlElement51.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement51.Text = "Pregunta #13";
-            this.accordionControlElement51.Click += new System.EventHandler(this.AccordionControlElement51_Click);
-            // 
-            // accordionControlElement52
-            // 
-            this.accordionControlElement52.Name = "accordionControlElement52";
-            this.accordionControlElement52.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement52.Text = "Pregunta #14";
-            this.accordionControlElement52.Click += new System.EventHandler(this.AccordionControlElement52_Click);
-            // 
-            // accordionControlElement53
-            // 
-            this.accordionControlElement53.Name = "accordionControlElement53";
-            this.accordionControlElement53.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement53.Text = "Pregunta #15";
-            this.accordionControlElement53.Click += new System.EventHandler(this.AccordionControlElement53_Click);
-            // 
-            // accordionControlElement54
-            // 
-            this.accordionControlElement54.Name = "accordionControlElement54";
-            this.accordionControlElement54.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement54.Text = "Pregunta #16";
-            this.accordionControlElement54.Click += new System.EventHandler(this.AccordionControlElement54_Click);
-            // 
-            // accordionControlElement55
-            // 
-            this.accordionControlElement55.Name = "accordionControlElement55";
-            this.accordionControlElement55.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement55.Text = "Pregunta #17";
-            this.accordionControlElement55.Click += new System.EventHandler(this.AccordionControlElement55_Click);
             // 
             // Form1
             // 
