@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DXApplication1.Vistas;
+using DXApplication1.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 
 namespace DXApplication1
 {
@@ -31,10 +35,37 @@ namespace DXApplication1
             this.panelControl1.Tag = control;
             control.Show();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            accordionControlElement1.Expanded = false;
+            accordionControlElement7.Expanded = false;
+            accordionControlElement2.Expanded = false;
+            accordionControlElement5.Expanded = false;
+            accordionControlElement6.Expanded = false;
+
+            connect();
+        }
+
+        private void connect()
+        {
+            List<Respuestas> respuestas = new List<Respuestas>();
+
+            var db = DB.Instance();
+            db.DatabaseName = "encuesta";
+
+            if (!db.IsConnect())
+            {
+                this.Close();
+            }
+        }
 
         private void AccordionControlElement9_Click(object sender, EventArgs e)
         {
             ChangeView(new question1());
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+            adapter.Fill(table);
         }
 
         private void AccordionControlElement18_Click(object sender, EventArgs e)
@@ -60,15 +91,6 @@ namespace DXApplication1
         private void AccordionControlElement22_Click(object sender, EventArgs e)
         {
             ChangeView(new question6());
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            accordionControlElement1.Expanded = false;
-            accordionControlElement7.Expanded = false;
-            accordionControlElement2.Expanded = false;
-            accordionControlElement5.Expanded = false;
-            accordionControlElement6.Expanded = false;
         }
 
         private void AccordionControlElement39_Click(object sender, EventArgs e)
