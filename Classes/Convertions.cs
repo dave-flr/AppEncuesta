@@ -29,5 +29,23 @@ namespace DXApplication1.Classes
             return list;
         }
 
+        public static List<QuestionNumerical> ConverToListNumerical(DataTable table)
+        {
+            List<QuestionNumerical> list = new List<QuestionNumerical>();
+            int i = 0;
+
+            foreach (DataRow rows in table.Rows)
+            {
+                QuestionNumerical result = new QuestionNumerical();
+                result.Valor = Convert.ToInt32(table.Rows[i]["valor"]);
+                result.Cantidad = Convert.ToInt32(table.Rows[i]["cantidad"]);
+
+                list.Add(result);
+                i++;
+            }
+
+            return list;
+        }
+
     }
 }
