@@ -82,7 +82,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Charts\Questions.cs" />
     <Compile Include="Classes\classes.cs" />
+    <Compile Include="Classes\Convertions.cs" />
     <Compile Include="Classes\DB.cs" />
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using DXApplication1.Classes;
+using DXApplication1.Classes.Charts;
+using DevExpress.XtraCharts;
 
 namespace DXApplication1.Vistas
 {
@@ -33,7 +35,14 @@ namespace DXApplication1.Vistas
 
             table = dataSet1.Tables[0];
 
-            List<Iii> list = new List<Iii>();
+            List<Questions> list = Convertions.ConvertoToList(table);
+            
+            chartControl1.Series[0].DataSource = list;
+            chartControl1.Series[0].ArgumentDataMember = "valor";
+            chartControl1.Series[0].ValueDataMembers.AddRange(new string[] { "cantidad" });
+
+            chartControl1.Series[0].Label.TextPattern = "{V} ({VP:p0})";
+            chartControl1.Series[0].LegendTextPattern = "{A}";
         }
     }
 }
