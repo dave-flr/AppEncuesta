@@ -10,8 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
+
 
 
 namespace DXApplication1
@@ -48,8 +47,6 @@ namespace DXApplication1
 
         private void connect()
         {
-            List<Respuestas> respuestas = new List<Respuestas>();
-
             var db = DB.Instance();
             db.DatabaseName = "encuesta";
 
@@ -57,15 +54,12 @@ namespace DXApplication1
             {
                 this.Close();
             }
+            db.Close();
         }
 
         private void AccordionControlElement9_Click(object sender, EventArgs e)
         {
             ChangeView(new question1());
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            DataTable table = new DataTable();
-            adapter.Fill(table);
         }
 
         private void AccordionControlElement18_Click(object sender, EventArgs e)
