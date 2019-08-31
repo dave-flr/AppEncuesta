@@ -41,6 +41,7 @@
             this.accordionControlElement18 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement19 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement20 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement21 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement22 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement39 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -90,7 +91,6 @@
             this.accordionControlElement47 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement48 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement49 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement21 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
@@ -203,6 +203,14 @@
             this.accordionControlElement20.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement20.Text = "Cédula";
             this.accordionControlElement20.Click += new System.EventHandler(this.AccordionControlElement20_Click);
+            // 
+            // accordionControlElement21
+            // 
+            this.accordionControlElement21.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement21.ImageOptions.Image")));
+            this.accordionControlElement21.Name = "accordionControlElement21";
+            this.accordionControlElement21.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement21.Text = "Departamento";
+            this.accordionControlElement21.Click += new System.EventHandler(this.AccordionControlElement21_Click_1);
             // 
             // accordionControlElement22
             // 
@@ -511,14 +519,6 @@
             // 
             this.accordionControlElement49.Name = "accordionControlElement49";
             // 
-            // accordionControlElement21
-            // 
-            this.accordionControlElement21.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement21.ImageOptions.Image")));
-            this.accordionControlElement21.Name = "accordionControlElement21";
-            this.accordionControlElement21.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement21.Text = "Departamento";
-            this.accordionControlElement21.Click += new System.EventHandler(this.AccordionControlElement21_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,10 +533,11 @@
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "AppEncuesta";
+            this.Text = "App Encuesta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
