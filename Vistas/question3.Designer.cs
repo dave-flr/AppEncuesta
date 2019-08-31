@@ -30,6 +30,8 @@
         {
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.PieBurstAnimation pieBurstAnimation1 = new DevExpress.XtraCharts.PieBurstAnimation();
+            DevExpress.XtraCharts.QuadraticEasingFunction quadraticEasingFunction1 = new DevExpress.XtraCharts.QuadraticEasingFunction();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.dataSet1 = new System.Data.DataSet();
@@ -41,11 +43,17 @@
             // 
             // chartControl1
             // 
+            this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
+            series1.LegendName = "Default Legend";
             series1.Name = "Serie1";
+            pieBurstAnimation1.Duration = System.TimeSpan.Parse("00:00:02");
+            quadraticEasingFunction1.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
+            pieBurstAnimation1.EasingFunction = quadraticEasingFunction1;
+            pieSeriesView1.Animation = pieBurstAnimation1;
             series1.View = pieSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};

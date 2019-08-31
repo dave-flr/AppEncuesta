@@ -76,8 +76,7 @@ namespace DXApplication1
         {
             ChangeView(new question4());
         }
-
-        private void AccordionControlElement21_Click(object sender, EventArgs e)
+        private void AccordionControlElement21_Click_1(object sender, EventArgs e)
         {
             ChangeView(new question5());
         }
@@ -141,5 +140,7 @@ namespace DXApplication1
         {
             ChangeView(new question_17());
         }
+
+        
     }
 }

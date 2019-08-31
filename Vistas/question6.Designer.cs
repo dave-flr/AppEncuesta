@@ -31,6 +31,8 @@
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.BarGrowUpAnimation barGrowUpAnimation1 = new DevExpress.XtraCharts.BarGrowUpAnimation();
+            DevExpress.XtraCharts.QuinticEasingFunction quinticEasingFunction1 = new DevExpress.XtraCharts.QuinticEasingFunction();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.dataSet1 = new System.Data.DataSet();
@@ -43,6 +45,7 @@
             // 
             // chartControl1
             // 
+            this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
@@ -52,6 +55,9 @@
             this.chartControl1.Name = "chartControl1";
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.Name = "Serie1";
+            barGrowUpAnimation1.Duration = System.TimeSpan.Parse("00:00:01.5000000");
+            barGrowUpAnimation1.EasingFunction = quinticEasingFunction1;
+            sideBySideBarSeriesView1.Animation = barGrowUpAnimation1;
             sideBySideBarSeriesView1.ColorEach = true;
             series1.View = sideBySideBarSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
