@@ -62,6 +62,7 @@
             chartTitle1.Text = "Año de Estudio";
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
+            this.chartControl1.Click += new System.EventHandler(this.ChartControl1_Click);
             // 
             // dataSet1
             // 

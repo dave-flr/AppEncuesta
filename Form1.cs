@@ -141,6 +141,14 @@ namespace DXApplication1
             ChangeView(new question_17());
         }
 
-        
+        private void AccordionControlElement8_Click(object sender, EventArgs e)
+        {
+            ChangeView(new Formulario());
+        }
+
+        private void PanelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

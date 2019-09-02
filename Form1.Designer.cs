@@ -228,7 +228,6 @@
             this.accordionControlElement41,
             this.accordionControlElement42,
             this.accordionControlElement43});
-            this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Datos Académicos";
@@ -364,6 +363,7 @@
             this.accordionControlElement8.Name = "accordionControlElement8";
             this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement8.Text = "Nuevo Resultado";
+            this.accordionControlElement8.Click += new System.EventHandler(this.AccordionControlElement8_Click);
             // 
             // fluentDesignFormContainer1
             // 
@@ -382,6 +382,7 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(662, 462);
             this.panelControl1.TabIndex = 0;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelControl1_Paint);
             // 
             // accordionControlElement15
             // 
