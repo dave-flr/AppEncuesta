@@ -28,16 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search_EditionUserControl));
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.label22 = new System.Windows.Forms.Label();
             this.textEditSearch = new DevExpress.XtraEditors.TextEdit();
@@ -63,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.radioGroupBecado = new DevExpress.XtraEditors.RadioGroup();
             this.radioGroupTipoMatricula = new DevExpress.XtraEditors.RadioGroup();
             this.label8 = new System.Windows.Forms.Label();
@@ -78,6 +74,13 @@
             this.textBoxCarrera = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxFacultad = new System.Windows.Forms.TextBox();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -88,70 +91,53 @@
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.textBoxSearchCedula = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.dataSet1 = new System.Data.DataSet();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupBecado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupTipoMatricula.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // xtraTabControl1
-            // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(662, 462);
-            this.xtraTabControl1.TabIndex = 0;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2,
-            this.xtraTabPage3});
-            // 
-            // xtraTabPage1
-            // 
-            this.xtraTabPage1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("xtraTabPage1.ImageOptions.SvgImage")));
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(520, 460);
-            this.xtraTabPage1.Text = "Buscar por cédula";
-            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.XtraTabPage1_Paint);
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("xtraTabPage2.ImageOptions.SvgImage")));
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(520, 460);
-            this.xtraTabPage2.Text = "Buscar por nombre";
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.flowLayoutPanel1);
             this.xtraTabPage3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("xtraTabPage3.ImageOptions.SvgImage")));
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(520, 460);
+            this.xtraTabPage3.Size = new System.Drawing.Size(525, 460);
             this.xtraTabPage3.Text = "Listado completo";
             // 
             // flowLayoutPanel1
@@ -163,58 +149,8 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(520, 460);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(525, 460);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.radioGroupBecado);
-            this.panelControl1.Controls.Add(this.radioGroupTipoMatricula);
-            this.panelControl1.Controls.Add(this.label8);
-            this.panelControl1.Controls.Add(this.panel8);
-            this.panelControl1.Controls.Add(this.panel7);
-            this.panelControl1.Controls.Add(this.panel6);
-            this.panelControl1.Controls.Add(this.label13);
-            this.panelControl1.Controls.Add(this.flowLayoutPanel3);
-            this.panelControl1.Controls.Add(this.label12);
-            this.panelControl1.Controls.Add(this.label11);
-            this.panelControl1.Controls.Add(this.textBoxAnioEstudio);
-            this.panelControl1.Controls.Add(this.label10);
-            this.panelControl1.Controls.Add(this.textBoxCarrera);
-            this.panelControl1.Controls.Add(this.label9);
-            this.panelControl1.Controls.Add(this.textBoxFacultad);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(3, 613);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(496, 542);
-            this.panelControl1.TabIndex = 0;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.textBox7);
-            this.panelControl2.Controls.Add(this.textBox6);
-            this.panelControl2.Controls.Add(this.textBox5);
-            this.panelControl2.Controls.Add(this.textBox4);
-            this.panelControl2.Controls.Add(this.textBox3);
-            this.panelControl2.Controls.Add(this.textBox2);
-            this.panelControl2.Controls.Add(this.label20);
-            this.panelControl2.Controls.Add(this.panel9);
-            this.panelControl2.Controls.Add(this.textBox1);
-            this.panelControl2.Controls.Add(this.radioGroup5);
-            this.panelControl2.Controls.Add(this.radioGroup4);
-            this.panelControl2.Controls.Add(this.radioGroup3);
-            this.panelControl2.Controls.Add(this.radioGroup2);
-            this.panelControl2.Controls.Add(this.radioGroup1);
-            this.panelControl2.Controls.Add(this.label14);
-            this.panelControl2.Controls.Add(this.flowLayoutPanel4);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(3, 1161);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(496, 1087);
-            this.panelControl2.TabIndex = 0;
-            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelControl2_Paint);
             // 
             // panelControl3
             // 
@@ -298,11 +234,11 @@
             // 
             // windowsUIButtonPanel1
             // 
-            windowsUIButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions1.Image")));
-            windowsUIButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions2.Image")));
+            windowsUIButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions5.Image")));
+            windowsUIButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions6.Image")));
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(214, 54);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
@@ -502,6 +438,30 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(123, 3);
             this.flowLayoutPanel2.TabIndex = 9;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.radioGroupBecado);
+            this.panelControl1.Controls.Add(this.radioGroupTipoMatricula);
+            this.panelControl1.Controls.Add(this.label8);
+            this.panelControl1.Controls.Add(this.panel8);
+            this.panelControl1.Controls.Add(this.panel7);
+            this.panelControl1.Controls.Add(this.panel6);
+            this.panelControl1.Controls.Add(this.label13);
+            this.panelControl1.Controls.Add(this.flowLayoutPanel3);
+            this.panelControl1.Controls.Add(this.label12);
+            this.panelControl1.Controls.Add(this.label11);
+            this.panelControl1.Controls.Add(this.textBoxAnioEstudio);
+            this.panelControl1.Controls.Add(this.label10);
+            this.panelControl1.Controls.Add(this.textBoxCarrera);
+            this.panelControl1.Controls.Add(this.label9);
+            this.panelControl1.Controls.Add(this.textBoxFacultad);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(3, 613);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(496, 542);
+            this.panelControl1.TabIndex = 0;
+            // 
             // radioGroupBecado
             // 
             this.radioGroupBecado.Location = new System.Drawing.Point(246, 417);
@@ -653,6 +613,119 @@
             this.textBoxFacultad.Size = new System.Drawing.Size(196, 17);
             this.textBoxFacultad.TabIndex = 15;
             // 
+            // panelControl2
+            // 
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.textBox7);
+            this.panelControl2.Controls.Add(this.textBox6);
+            this.panelControl2.Controls.Add(this.textBox5);
+            this.panelControl2.Controls.Add(this.textBox4);
+            this.panelControl2.Controls.Add(this.textBox3);
+            this.panelControl2.Controls.Add(this.textBox2);
+            this.panelControl2.Controls.Add(this.label20);
+            this.panelControl2.Controls.Add(this.panel9);
+            this.panelControl2.Controls.Add(this.textBox1);
+            this.panelControl2.Controls.Add(this.radioGroup5);
+            this.panelControl2.Controls.Add(this.radioGroup4);
+            this.panelControl2.Controls.Add(this.radioGroup3);
+            this.panelControl2.Controls.Add(this.radioGroup2);
+            this.panelControl2.Controls.Add(this.radioGroup1);
+            this.panelControl2.Controls.Add(this.label14);
+            this.panelControl2.Controls.Add(this.flowLayoutPanel4);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl2.Location = new System.Drawing.Point(3, 1161);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(496, 1087);
+            this.panelControl2.TabIndex = 0;
+            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelControl2_Paint);
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox7.Location = new System.Drawing.Point(25, 888);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(454, 43);
+            this.textBox7.TabIndex = 25;
+            this.textBox7.Text = "¿Qué recomienda para mejorar el sistema de matrícula en línea que ofrece la UNAN-" +
+    "León?";
+            this.textBox7.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox6.Location = new System.Drawing.Point(25, 766);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(454, 43);
+            this.textBox6.TabIndex = 25;
+            this.textBox6.Text = "¿Cuánto dinero le ha ahorrado usar el nuevo sistema de matrícula en línea que ofr" +
+    "ece laUNAN-León? ";
+            this.textBox6.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox5.Location = new System.Drawing.Point(25, 588);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(454, 43);
+            this.textBox5.TabIndex = 25;
+            this.textBox5.Text = "¿De qué manera le ha ayudado el nuevo sistema de matrícula en línea que ofrece la" +
+    " UNANLeón?";
+            this.textBox5.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox4.Location = new System.Drawing.Point(25, 437);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(454, 43);
+            this.textBox4.TabIndex = 25;
+            this.textBox4.Text = "¿Qué tan accesible está el nuevo sistema de matrícula en línea que ofrece la UNAN" +
+    "-León?";
+            this.textBox4.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox3.Location = new System.Drawing.Point(25, 262);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(454, 43);
+            this.textBox3.TabIndex = 25;
+            this.textBox3.Text = "¿Qué le parece el nuevo sistema de matrícula en línea que ofrece la UNAN-León?";
+            this.textBox3.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox2.Location = new System.Drawing.Point(25, 95);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(454, 43);
+            this.textBox2.TabIndex = 25;
+            this.textBox2.Text = "¿Usted ha usado el Sistema de Matricula en línea que le ofrece la Universidad?";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -774,138 +847,163 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(81, 3);
             this.flowLayoutPanel4.TabIndex = 14;
             // 
-            // textBox2
+            // xtraTabPage1
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(25, 95);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(454, 43);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "¿Usted ha usado el Sistema de Matricula en línea que le ofrece la Universidad?";
+            this.xtraTabPage1.Controls.Add(this.splitContainer1);
+            this.xtraTabPage1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("xtraTabPage1.ImageOptions.SvgImage")));
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(525, 460);
+            this.xtraTabPage1.Text = "Buscar por cédula";
+            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.XtraTabPage1_Paint);
             // 
-            // textBox3
+            // splitContainer1
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(25, 262);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(454, 43);
-            this.textBox3.TabIndex = 25;
-            this.textBox3.Text = "¿Qué le parece el nuevo sistema de matrícula en línea que ofrece la UNAN-León?";
-            this.textBox3.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // textBox4
+            // splitContainer1.Panel1
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(25, 437);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(454, 43);
-            this.textBox4.TabIndex = 25;
-            this.textBox4.Text = "¿Qué tan accesible está el nuevo sistema de matrícula en línea que ofrece la UNAN" +
-    "-León?";
-            this.textBox4.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.splitContainer1.Panel1.Controls.Add(this.simpleButton1);
+            this.splitContainer1.Panel1.Controls.Add(this.panelControl4);
+            this.splitContainer1.Panel1.Controls.Add(this.textBoxSearchCedula);
+            this.splitContainer1.Panel1.Controls.Add(this.label15);
             // 
-            // textBox5
+            // splitContainer1.Panel2
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(25, 588);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(454, 43);
-            this.textBox5.TabIndex = 25;
-            this.textBox5.Text = "¿De qué manera le ha ayudado el nuevo sistema de matrícula en línea que ofrece la" +
-    " UNANLeón?";
-            this.textBox5.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.splitContainer1.Panel2.Controls.Add(this.gridControl1);
+            this.splitContainer1.Size = new System.Drawing.Size(525, 460);
+            this.splitContainer1.SplitterDistance = 72;
+            this.splitContainer1.TabIndex = 0;
             // 
-            // textBox6
+            // panelControl4
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox6.Location = new System.Drawing.Point(25, 766);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(454, 43);
-            this.textBox6.TabIndex = 25;
-            this.textBox6.Text = "¿Cuánto dinero le ha ahorrado usar el nuevo sistema de matrícula en línea que ofr" +
-    "ece laUNAN-León? ";
-            this.textBox6.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.panelControl4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.panelControl4.Appearance.Options.UseBackColor = true;
+            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl4.Location = new System.Drawing.Point(239, 46);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(213, 1);
+            this.panelControl4.TabIndex = 0;
             // 
-            // textBox7
+            // textBoxSearchCedula
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox7.Location = new System.Drawing.Point(25, 888);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(454, 43);
-            this.textBox7.TabIndex = 25;
-            this.textBox7.Text = "¿Qué recomienda para mejorar el sistema de matrícula en línea que ofrece la UNAN-" +
-    "León?";
-            this.textBox7.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.textBoxSearchCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSearchCedula.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.textBoxSearchCedula.Location = new System.Drawing.Point(239, 30);
+            this.textBoxSearchCedula.Name = "textBoxSearchCedula";
+            this.textBoxSearchCedula.Size = new System.Drawing.Size(213, 17);
+            this.textBoxSearchCedula.TabIndex = 1;
+            this.textBoxSearchCedula.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox8_KeyUp);
             // 
-            // EditQuizForm
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label15.Location = new System.Drawing.Point(26, 30);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(210, 17);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Ingresar la cédula del encuestado";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(525, 384);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // xtraTabControl1
+            // 
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
+            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(662, 462);
+            this.xtraTabControl1.TabIndex = 0;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage3});
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "NewDataSet";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.simpleButton1.Appearance.Options.UseBorderColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(458, 21);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(38, 35);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
+            // 
+            // Search_EditionUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.xtraTabControl1);
-            this.Name = "EditQuizForm";
+            this.Name = "Search_EditionUserControl";
             this.Size = new System.Drawing.Size(662, 462);
-            this.Load += new System.EventHandler(this.EditQuizForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Search_EditionUserControl_Load);
             this.xtraTabPage3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupBecado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupTipoMatricula.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            this.xtraTabPage1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.Label label22;
         private DevExpress.XtraEditors.TextEdit textEditSearch;
         private DevExpress.XtraEditors.TextEdit textEditFinal;
@@ -930,6 +1028,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.RadioGroup radioGroupBecado;
         private DevExpress.XtraEditors.RadioGroup radioGroupTipoMatricula;
         private System.Windows.Forms.Label label8;
@@ -945,6 +1044,11 @@
         private System.Windows.Forms.TextBox textBoxCarrera;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxFacultad;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label20;
@@ -957,9 +1061,15 @@
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private System.Windows.Forms.TextBox textBoxSearchCedula;
+        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Data.DataSet dataSet1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
