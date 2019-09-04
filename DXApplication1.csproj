@@ -120,6 +120,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Vistas\VistasEdicion\NewResultUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +131,18 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vistas\VistasEdicion\Search_EditionUserControl.Designer.cs">
+=======
+    <Compile Include="Vistas\FormsEdicion\NewResultUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormsEdicion\NewResultUserControl.Designer.cs">
+      <DependentUpon>NewResultUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormsEdicion\Search_EditionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormsEdicion\Search_EditionUserControl.Designer.cs">
+>>>>>>> bbaa31304053261af9c51891213f42cf4cabcaf1
       <DependentUpon>Search_EditionUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\question-10.cs">
@@ -248,10 +261,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Vistas\VistasEdicion\NewResultUserControl.resx">
       <DependentUpon>NewResultUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistasEdicion\Search_EditionUserControl.resx">
+=======
+    <EmbeddedResource Include="Vistas\FormsEdicion\NewResultUserControl.resx">
+      <DependentUpon>NewResultUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormsEdicion\Search_EditionUserControl.resx">
+>>>>>>> bbaa31304053261af9c51891213f42cf4cabcaf1
       <DependentUpon>Search_EditionUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\question-10.resx">
