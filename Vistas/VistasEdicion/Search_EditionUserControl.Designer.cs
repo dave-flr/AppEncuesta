@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search_EditionUserControl));
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.label22 = new System.Windows.Forms.Label();
             this.textEditSearch = new DevExpress.XtraEditors.TextEdit();
             this.textEditFinal = new DevExpress.XtraEditors.TextEdit();
-            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.radioGroupSexo = new DevExpress.XtraEditors.RadioGroup();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -93,6 +90,7 @@
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.textBoxSearchCedula = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -100,7 +98,9 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.dataSet1 = new System.Data.DataSet();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -130,6 +130,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // xtraTabPage3
@@ -155,10 +157,10 @@
             // panelControl3
             // 
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Controls.Add(this.groupControl1);
             this.panelControl3.Controls.Add(this.label22);
             this.panelControl3.Controls.Add(this.textEditSearch);
             this.panelControl3.Controls.Add(this.textEditFinal);
-            this.panelControl3.Controls.Add(this.windowsUIButtonPanel1);
             this.panelControl3.Controls.Add(this.radioGroupSexo);
             this.panelControl3.Controls.Add(this.panel5);
             this.panelControl3.Controls.Add(this.panel4);
@@ -232,20 +234,6 @@
             this.textEditFinal.Size = new System.Drawing.Size(54, 24);
             this.textEditFinal.TabIndex = 30;
             // 
-            // windowsUIButtonPanel1
-            // 
-            windowsUIButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions5.Image")));
-            windowsUIButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("windowsUIButtonImageOptions6.Image")));
-            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
-            this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(214, 54);
-            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
-            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(105, 47);
-            this.windowsUIButtonPanel1.TabIndex = 29;
-            this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
-            // 
             // radioGroupSexo
             // 
             this.radioGroupSexo.Location = new System.Drawing.Point(246, 315);
@@ -257,8 +245,8 @@
             this.radioGroupSexo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.radioGroupSexo.Properties.Columns = 1;
             this.radioGroupSexo.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem('m', "Masculino "),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem('f', "Femenino")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Masculino "),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Femenino")});
             this.radioGroupSexo.Size = new System.Drawing.Size(196, 68);
             this.radioGroupSexo.TabIndex = 28;
             // 
@@ -877,6 +865,19 @@
             this.splitContainer1.SplitterDistance = 72;
             this.splitContainer1.TabIndex = 0;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.simpleButton1.Appearance.Options.UseBorderColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(458, 21);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(38, 35);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
+            // 
             // panelControl4
             // 
             this.panelControl4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
@@ -922,6 +923,8 @@
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick_1);
             // 
             // xtraTabControl1
             // 
@@ -936,23 +939,41 @@
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage3});
+            this.xtraTabControl1.Click += new System.EventHandler(this.XtraTabControl1_Click);
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "NewDataSet";
             // 
-            // simpleButton1
+            // groupControl1
             // 
-            this.simpleButton1.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.simpleButton1.Appearance.Options.UseBorderColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(458, 21);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(38, 35);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl1.Appearance.Options.UseBackColor = true;
+            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl1.Controls.Add(this.simpleButton3);
+            this.groupControl1.Controls.Add(this.simpleButton2);
+            this.groupControl1.Location = new System.Drawing.Point(179, 70);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(200, 33);
+            this.groupControl1.TabIndex = 35;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(3, 3);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 0;
+            this.simpleButton2.Text = "simpleButton2";
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(122, 3);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton3.TabIndex = 1;
+            this.simpleButton3.Text = "simpleButton3";
+            this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
             // 
             // Search_EditionUserControl
             // 
@@ -995,6 +1016,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1007,7 +1030,6 @@
         private System.Windows.Forms.Label label22;
         private DevExpress.XtraEditors.TextEdit textEditSearch;
         private DevExpress.XtraEditors.TextEdit textEditFinal;
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
         private DevExpress.XtraEditors.RadioGroup radioGroupSexo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
@@ -1071,5 +1093,8 @@
         private System.Data.DataSet dataSet1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
