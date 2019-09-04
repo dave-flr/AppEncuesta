@@ -8,11 +8,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DXApplication1.Classes;
+using MySql.Data.MySqlClient;
 
 namespace DXApplication1.Vistas.FormsEdition
 {
     public partial class Search_EditionUserControl : DevExpress.XtraEditors.XtraUserControl
     {
+        private DB dbConnection = null;
+
         public Search_EditionUserControl()
         {
 
@@ -24,9 +28,12 @@ namespace DXApplication1.Vistas.FormsEdition
 
         }
 
-        private void EditQuizForm_Load(object sender, EventArgs e)
+        private void Search_EditionUserControl_Load(object sender, EventArgs e)
         {
-
+            dbConnection = DB.Instance();
+            dbConnection.DatabaseName = "respuestas";
+            if (!dbConnection.IsConnect())
+                MessageBox.Show("Hay un error con la base de Datos", "Información");
         }
 
         private void FlowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -40,28 +47,33 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void XtraTabPage3_Resize(object sender, EventArgs e)
         {
-        
-            //fijate aqui
-            
-            // Donde? en Form1.cs ahi te comenté algo 
-            //flowLayoutPanel1.Width = this.Width;
         }
 
         private void FlowLayoutPanel1_Resize(object sender, EventArgs e)
         {
-            //MessageBox.Show("" + this.Width);
-            //panelControl1.Width = this.Width;
-            //panelControl2.Width = this.Width;
         }
 
         private void PanelControl2_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void TextBox3_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void TextBox8_KeyUp(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void SimpleButton1_Click(object sender, EventArgs e)
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT numero, I, II FROM respuestas where IV= '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
+            DataTable table = new DataTable();
+            adapter.Fill(dataSet1);
+
+            table = dataSet1.Tables[0];
+
+            gridControl1.DataSource = table;
         }
     }
 }

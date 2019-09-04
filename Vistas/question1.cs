@@ -41,5 +41,10 @@ namespace DXApplication1.Vistas
         {
 
         }
+
+        private void GridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
