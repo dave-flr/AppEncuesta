@@ -10,17 +10,23 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DXApplication1.Classes;
 using MySql.Data.MySqlClient;
+<<<<<<< HEAD
 using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraGrid.Views.Grid;
+=======
+>>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
 
 namespace DXApplication1.Vistas.FormsEdition
 {
     public partial class Search_EditionUserControl : DevExpress.XtraEditors.XtraUserControl
     {
         private DB dbConnection = null;
+<<<<<<< HEAD
         private int Contador = 0, NumeroDeEncuestas = 10000;
         List<Respuestas> listRespuestas;
+=======
+>>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
 
         public Search_EditionUserControl()
         {
@@ -39,9 +45,12 @@ namespace DXApplication1.Vistas.FormsEdition
             dbConnection.DatabaseName = "respuestas";
             if (!dbConnection.IsConnect())
                 MessageBox.Show("Hay un error con la base de Datos", "Información");
+<<<<<<< HEAD
 
             fill();
             fillFields(listRespuestas[Contador]);
+=======
+>>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
         }
 
         private void FlowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -75,11 +84,16 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas where IV= '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
+=======
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT numero, I, II FROM respuestas where IV= '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
+>>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
             DataTable table = new DataTable();
             adapter.Fill(dataSet1);
 
             table = dataSet1.Tables[0];
+<<<<<<< HEAD
 
             listRespuestas = Convertions.ConvertoToListResp(table);
 
@@ -100,7 +114,10 @@ namespace DXApplication1.Vistas.FormsEdition
             table.Columns.Remove("XVII");
 
             gridControl1.DataSource = table;
+=======
+>>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
 
+            gridControl1.DataSource = table;
         }
 
 
