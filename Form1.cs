@@ -10,8 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
-
+using DXApplication1.Vistas.FormsEdition;
 
 namespace DXApplication1
 {
@@ -30,7 +29,10 @@ namespace DXApplication1
             }
 
             control.Dock = DockStyle.Fill;
+
             this.panelControl1.Controls.Add(control);
+
+            
             this.panelControl1.Tag = control;
             control.Show();
         }
@@ -143,12 +145,37 @@ namespace DXApplication1
 
         private void AccordionControlElement8_Click(object sender, EventArgs e)
         {
-            ChangeView(new Formulario());
+            ChangeView(new NewResultUserControl());
+        }
+
+        private void AccordionControlElement56_Click_1(object sender, EventArgs e)
+        {
+            ChangeView(new Search_EditionUserControl());
+        }
+
+        private void AccordionControlElement1_Click(object sender, EventArgs e)
+        {
+            
+
         }
 
         private void PanelControl1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void AccordionControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccordionControlElement56_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        
     }
 }
