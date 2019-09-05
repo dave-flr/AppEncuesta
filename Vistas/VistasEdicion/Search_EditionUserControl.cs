@@ -193,8 +193,7 @@ namespace DXApplication1.Vistas.FormsEdition
         private string returnValue(int key, string tableName) { //Un solo metodo para todas las consultas
             string Value = null;
             try{
-                if (!dbConnection.IsConnect())
-                    MessageBox.Show("Hay un error con la base de Datos", "Información");
+                if (dbConnection.IsConnect()) ;
             }
             catch (Exception erro){
                 MessageBox.Show("Error" + erro);
