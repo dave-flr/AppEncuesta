@@ -19,7 +19,7 @@ namespace DXApplication1.Vistas.FormsEdition
     public partial class Search_EditionUserControl : DevExpress.XtraEditors.XtraUserControl
     {
         private DB dbConnection = null;
-        private int Contador = 0, NumeroDeEncuestas = 10000;
+        private int Contador = 0;
         List<Respuestas> listRespuestas;
 
         public Search_EditionUserControl()
@@ -41,7 +41,35 @@ namespace DXApplication1.Vistas.FormsEdition
                 MessageBox.Show("Hay un error con la base de Datos", "Información");
 
             fill();
+            LoadCombo();
             fillFields(listRespuestas[Contador]);
+            simpleButton4.Enabled = false;
+        }
+
+        private void LoadCombo()
+        {
+            try
+            {
+                dbConnection.IsConnect();
+                MySqlConnection temp = dbConnection.Connection;
+                temp.Open();
+                MySqlCommand cmd = temp.CreateCommand();
+                cmd.CommandText = ("SELECT valor From viii_carrera");
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                int i = 0;
+                while (reader.Read())
+                {
+                    comboBoxCarrera.Properties.Items.Add(reader.GetString(0));
+                    i++;
+                }
+
+                temp.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Error" + erro);
+            }
         }
 
         private void FlowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -145,6 +173,7 @@ namespace DXApplication1.Vistas.FormsEdition
             {
                 Contador--;
                 fillFields(listRespuestas[Contador]);
+                simpleButton4.Enabled = false;
             }
         }
 
@@ -154,6 +183,7 @@ namespace DXApplication1.Vistas.FormsEdition
             {
                 Contador++;
                 fillFields(listRespuestas[Contador]);
+                simpleButton4.Enabled = false;
             }
         }
 
@@ -171,10 +201,15 @@ namespace DXApplication1.Vistas.FormsEdition
             radioGroupSexo.SelectedIndex = result.Iii;
             textBoxCedula.Text = result.Iv;
 
-            textBoxDepartamento.Text = returnValue(result.V, TableNames.returnTableName(5));
+            /*comboBoxDepartamento.SelectedIndex = returnValue(result.V, TableNames.returnTableName(5));
             textBoxCiudad.Text = returnValue(result.Vi, TableNames.returnTableName(6));
             textBoxFacultad.Text = returnValue(result.Vii, TableNames.returnTableName(7));
-            textBoxCarrera.Text = returnValue(result.Viii, TableNames.returnTableName(8));
+            textBoxCarrera.Text = returnValue(result.Viii, TableNames.returnTableName(8));*/
+
+            comboBoxDepartamento.SelectedIndex = result.V;
+            comboBoxCiudad.SelectedIndex = result.Vi;
+            comboBoxFacultad.SelectedIndex = result.Vii;
+            comboBoxCarrera.SelectedIndex = result.Viii;
 
             textBoxAnioEstudio.Text = result.Ix.ToString();
             radioGroupTipoMatricula.SelectedIndex = result.X;
@@ -190,29 +225,101 @@ namespace DXApplication1.Vistas.FormsEdition
 
         }
 
-        private string returnValue(int key, string tableName) { //Un solo metodo para todas las consultas
-            string Value = null;
+        private int returnValue(int key, string tableName) { //Un solo metodo para todas las consultas
+            int Value = -1;
             try{
-                if (dbConnection.IsConnect()) ;
+                dbConnection.IsConnect();
+                MySqlConnection temp = dbConnection.Connection;
+                temp.Open();
+                MySqlCommand cmd = temp.CreateCommand();
+                cmd.CommandText = ("SELECT clave From " + tableName + " INNER JOIN respuestas WHERE clave = " + key + " GROUP BY valor");
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Value = reader.GetInt32(0);
+                }
+
+                temp.Close();
+                return Value;
             }
             catch (Exception erro){
                 MessageBox.Show("Error" + erro);
+                return -1;
             }
+        }
 
-            MySqlConnection temp = dbConnection.Connection;
-            temp.Open();
-            MySqlCommand cmd = temp.CreateCommand();
-            cmd.CommandText = ("SELECT valor From " + tableName + " INNER JOIN respuestas WHERE clave = " + key + " GROUP BY valor");
-            
-            MySqlDataReader reader = cmd.ExecuteReader();
+        private void enableSaveButton()
+        {
+            simpleButton4.Enabled = true;
+        }
 
-            while (reader.Read())
+        private void TextBoxNombres_TextChanged(object sender, EventArgs e)
+        {
+            enableSaveButton();
+        }
+
+        private void RadioGroupSexo_Click(object sender, EventArgs e)
+        {
+            enableSaveButton();
+        }
+
+        private void SimpleButton4_Click(object sender, EventArgs e)
+        {//Boton guardar cambios
+            int succes = -1;
+            int save = ++Contador;
+            try
             {
-                Value = reader.GetString(0);
-            }
+                dbConnection.IsConnect();
+                MySqlConnection temp = dbConnection.Connection;
+                temp.Open();
 
-            temp.Close();
-            return Value;
+
+                MySqlCommand cmd = temp.CreateCommand();
+                cmd.CommandText = ("UPDATE `encuesta`.`respuestas` SET `I` = @I, `II` = @II, `III` = @III, `IV` = @IV, `V` = @V, `VI` = @VI, `VII` = @VII, `VIII` = @VIII, `IX` = @IX, `X` = @X, `XI` = @XI, `XII` = @XII, `XIII` = @XIII, `XIV` = @XIV, `XV` = @XV, `XVI` = @XVI, `XVII` = @XVII WHERE `numero` = @save");
+
+                cmd.Parameters.AddWithValue("I", textBoxNombres.Text);
+                cmd.Parameters.AddWithValue("II", textBoxApellidos.Text);
+                cmd.Parameters.AddWithValue("III", Convert.ToInt32(radioGroupSexo.SelectedIndex));//
+                cmd.Parameters.AddWithValue("IV", textBoxCedula.Text);
+                cmd.Parameters.AddWithValue("V", comboBoxDepartamento.SelectedIndex);
+                cmd.Parameters.AddWithValue("VI", comboBoxCiudad.SelectedIndex);
+                cmd.Parameters.AddWithValue("VII", comboBoxFacultad.SelectedIndex);
+                cmd.Parameters.AddWithValue("VIII", comboBoxCarrera.SelectedIndex);
+                cmd.Parameters.AddWithValue("IX", Convert.ToInt32(textBoxAnioEstudio.Text));
+                cmd.Parameters.AddWithValue("X", radioGroupTipoMatricula.SelectedIndex);
+                cmd.Parameters.AddWithValue("XI", radioGroupBecado.SelectedIndex);
+                cmd.Parameters.AddWithValue("XII", radioGroup1.SelectedIndex);
+                cmd.Parameters.AddWithValue("XIII", radioGroup2.SelectedIndex);
+                cmd.Parameters.AddWithValue("XIV", radioGroup3.SelectedIndex);
+                cmd.Parameters.AddWithValue("XV", radioGroup4.SelectedIndex);
+                cmd.Parameters.AddWithValue("XVI", Convert.ToInt32(textBox1.Text));
+                cmd.Parameters.AddWithValue("XVII", radioGroup5.SelectedIndex);
+                cmd.Parameters.AddWithValue("save", save);
+
+
+
+                succes = cmd.ExecuteNonQuery();
+
+                if (succes < 0)
+                {
+                    MessageBox.Show("Error al insertar en la base de datos");
+                }
+
+                temp.Close();
+                simpleButton4.Enabled = false;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Error" + erro);
+                //return null;
+            }
+        }
+
+        private void ComboBoxDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            enableSaveButton();
         }
     }
 }
