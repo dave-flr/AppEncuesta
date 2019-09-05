@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DXApplication1.Classes
 {
-    class Respuestas
+    public class Respuestas
     {
         int numero;
         string i;
@@ -144,4 +144,86 @@ namespace DXApplication1.Classes
         public int Key { get => key; set => key = value; }
         public string Value { get => value; set => this.value = value; }
     }
+
+    /*public static class TableNames{
+        public static string returnTableNames(int i) {
+            switch (i)
+            {
+                case 3:
+                    return "iii_sexo";
+                case 5:
+                    return "v_departamento";
+                case 6:
+                    return "vi_ciudad";
+                case 7:
+                    return "vii_facultad";
+                case 8:
+                    return "viii_carrera";
+                case 10:
+                    return "x_matricula";
+                case 11:
+                    return "xi_becado";
+                case 12:
+                    return "xii";
+                case 13:
+                    return "xiii";
+                case 14:
+                    return "xiv";
+                case 15:
+                    return "xv";
+                case 17:
+                    return "xvii";
+                default:
+                    return null;
+            }
+        }
+    }*/
+
+   /* public class TableNames {
+        string sexo = "iii_sexo";
+        string departamento = "v_departamento";
+        string ciudad = "vi_ciudad";
+        string facultad = "vii_facultad";
+        string carrera = "viii_carrera";
+        string matricula = "x_matricula";
+        string becado = "xi_becado";
+        string xii = "xii";
+        string xiii = "xiii";
+        string xiv = "xiv";
+        string xv = "xv";
+        string xvii = "xvii";
+
+        public string returnTableName(int i) {
+            switch (i)
+            {
+                case 3:
+                    return sexo;
+                case 5:
+                    return departamento;
+                case 6:
+                    return ciudad;
+                case 7:
+                    return facultad;
+                case 8:
+                    return carrera;
+                case 10:
+                    return matricula;
+                case 11:
+                    return becado;
+                case 12:
+                    return xii;
+                case 13:
+                    return xiii;
+                case 14:
+                    return xiv;
+                case 15:
+                    return xv;
+                case 17:
+                    return xvii;
+                default:
+                    return null;
+            }
+
+        }
+    }*/
 }

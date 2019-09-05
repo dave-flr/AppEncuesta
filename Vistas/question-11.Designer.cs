@@ -55,6 +55,7 @@
             chartTitle1.Text = "Tipo de Beca";
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
+            this.chartControl1.Click += new System.EventHandler(this.ChartControl1_Click);
             // 
             // dataSet1
             // 
