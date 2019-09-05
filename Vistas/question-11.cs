@@ -44,5 +44,10 @@ namespace DXApplication1.Vistas
             chartControl1.Series[0].Label.TextPattern = "{V} ({VP:p0})";
             chartControl1.Series[0].LegendTextPattern = "{A}";
         }
+
+        private void ChartControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

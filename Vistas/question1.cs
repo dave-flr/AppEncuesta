@@ -36,5 +36,15 @@ namespace DXApplication1.Vistas
 
             gridControl1.DataSource = table;
         }
+
+        private void GridView1_ColumnWidthChanged(object sender, DevExpress.XtraGrid.Views.Base.ColumnEventArgs e)
+        {
+
+        }
+
+        private void GridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
