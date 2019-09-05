@@ -145,8 +145,8 @@ namespace DXApplication1.Classes
         public string Value { get => value; set => this.value = value; }
     }
 
-    /*public static class TableNames{
-        public static string returnTableNames(int i) {
+    public static class TableNames{
+        public static string returnTableName(int i) {
             switch (i)
             {
                 case 3:
@@ -177,7 +177,7 @@ namespace DXApplication1.Classes
                     return null;
             }
         }
-    }*/
+    }
 
    /* public class TableNames {
         string sexo = "iii_sexo";

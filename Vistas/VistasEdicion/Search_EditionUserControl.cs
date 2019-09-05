@@ -10,23 +10,17 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DXApplication1.Classes;
 using MySql.Data.MySqlClient;
-<<<<<<< HEAD
 using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraGrid.Views.Grid;
-=======
->>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
 
 namespace DXApplication1.Vistas.FormsEdition
 {
     public partial class Search_EditionUserControl : DevExpress.XtraEditors.XtraUserControl
     {
         private DB dbConnection = null;
-<<<<<<< HEAD
         private int Contador = 0, NumeroDeEncuestas = 10000;
         List<Respuestas> listRespuestas;
-=======
->>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
 
         public Search_EditionUserControl()
         {
@@ -45,12 +39,9 @@ namespace DXApplication1.Vistas.FormsEdition
             dbConnection.DatabaseName = "respuestas";
             if (!dbConnection.IsConnect())
                 MessageBox.Show("Hay un error con la base de Datos", "Información");
-<<<<<<< HEAD
 
             fill();
             fillFields(listRespuestas[Contador]);
-=======
->>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
         }
 
         private void FlowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -84,16 +75,11 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas where IV= '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
-=======
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT numero, I, II FROM respuestas where IV= '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
->>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
             DataTable table = new DataTable();
             adapter.Fill(dataSet1);
 
             table = dataSet1.Tables[0];
-<<<<<<< HEAD
 
             listRespuestas = Convertions.ConvertoToListResp(table);
 
@@ -114,8 +100,6 @@ namespace DXApplication1.Vistas.FormsEdition
             table.Columns.Remove("XVII");
 
             gridControl1.DataSource = table;
-=======
->>>>>>> 309302b7b1f0b26960966e4b4e467cd133316af3
 
             gridControl1.DataSource = table;
         }
@@ -157,59 +141,77 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton2_Click(object sender, EventArgs e)
         {//Anterior
-            if (Contador >= 0)
+            if (Contador > 0)
             {
-                fillFields(listRespuestas[Contador--]);
+                Contador--;
+                fillFields(listRespuestas[Contador]);
             }
         }
 
         private void SimpleButton3_Click(object sender, EventArgs e)
         {//Siguiente
-            if (Contador >= 0 && Contador < NumeroDeEncuestas)
+            if (Contador >= 0 && Contador < listRespuestas.Count-1)
             {
-                fillFields(listRespuestas[Contador++]);
+                Contador++;
+                fillFields(listRespuestas[Contador]);
             }
         }
 
         private void XtraTabControl1_Click(object sender, EventArgs e)
         {
-            fillFields(listRespuestas[Contador]);
+            //fillFields(listRespuestas[Contador]);
         }
 
         private void fillFields(Respuestas result) {
+            textEditSearch.Text = (Contador+1).ToString();
+            textEditFinal.Text = listRespuestas.Count.ToString();
+
             textBoxNombres.Text = result.I;
             textBoxApellidos.Text = result.Ii;
             radioGroupSexo.SelectedIndex = result.Iii;
             textBoxCedula.Text = result.Iv;
 
-            textBoxDepartamento.Text = returnValue(result.V);
+            textBoxDepartamento.Text = returnValue(result.V, TableNames.returnTableName(5));
+            textBoxCiudad.Text = returnValue(result.Vi, TableNames.returnTableName(6));
+            textBoxFacultad.Text = returnValue(result.Vii, TableNames.returnTableName(7));
+            textBoxCarrera.Text = returnValue(result.Viii, TableNames.returnTableName(8));
 
-            //textBoxCiudad.Text = result.Vi;
+            textBoxAnioEstudio.Text = result.Ix.ToString();
+            radioGroupTipoMatricula.SelectedIndex = result.X;
+            radioGroupBecado.SelectedIndex = result.Xi;
+            radioGroup1.SelectedIndex = result.Xii;
+            radioGroup2.SelectedIndex = result.Xiii;
+            radioGroup3.SelectedIndex = result.Xiv;
+            radioGroup4.SelectedIndex = result.Xv;
+
+            textBox1.Text = result.Xvi.ToString();
+
+            radioGroup5.SelectedIndex = result.Xvii;
 
         }
 
-        private string returnValue(int key) {
+        private string returnValue(int key, string tableName) { //Un solo metodo para todas las consultas
             string Value = null;
-            try
-            {
+            try{
                 if (!dbConnection.IsConnect())
                     MessageBox.Show("Hay un error con la base de Datos", "Información");
             }
-            catch (Exception erro)
-            {
+            catch (Exception erro){
                 MessageBox.Show("Error" + erro);
             }
+
             MySqlConnection temp = dbConnection.Connection;
             temp.Open();
             MySqlCommand cmd = temp.CreateCommand();
-            cmd.CommandText = ("SELECT valor From v_departamento INNER JOIN respuestas WHERE clave = '7' GROUP BY valor");
+            cmd.CommandText = ("SELECT valor From " + tableName + " INNER JOIN respuestas WHERE clave = " + key + " GROUP BY valor");
             
             MySqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
+
             while (reader.Read())
             {
-                Value = reader.ToString();
+                Value = reader.GetString(0);
             }
+
             temp.Close();
             return Value;
         }

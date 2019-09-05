@@ -42,7 +42,7 @@ namespace DXApplication1.Classes
             {
                 if (String.IsNullOrEmpty(databaseName))
                     return false;
-                string connstring = string.Format("Server=localhost; database={0}; UID=root; password=", databaseName);
+                string connstring = string.Format("Server=localhost; database={0}; UID=root; password=00.dat", databaseName);
                 connection = new MySqlConnection(connstring);
                 connection.Open();
             }
