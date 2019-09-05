@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewResultUserControl));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.radioGroupSexo = new DevExpress.XtraEditors.RadioGroup();
@@ -36,8 +37,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxCiudad = new System.Windows.Forms.TextBox();
-            this.textBoxDepartamento = new System.Windows.Forms.TextBox();
             this.textBoxCedula = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,9 +61,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxAnioEstudio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxCarrera = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxFacultad = new System.Windows.Forms.TextBox();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.label20 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -82,6 +79,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBoxDepartamento = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxCiudad = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxFacultad = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxCarrera = new DevExpress.XtraEditors.ComboBoxEdit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -97,6 +99,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -120,14 +126,15 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.comboBoxCiudad);
+            this.panelControl1.Controls.Add(this.comboBoxDepartamento);
+            this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.radioGroupSexo);
             this.panelControl1.Controls.Add(this.panel5);
             this.panelControl1.Controls.Add(this.panel4);
             this.panelControl1.Controls.Add(this.panel3);
             this.panelControl1.Controls.Add(this.panel2);
             this.panelControl1.Controls.Add(this.panel1);
-            this.panelControl1.Controls.Add(this.textBoxCiudad);
-            this.panelControl1.Controls.Add(this.textBoxDepartamento);
             this.panelControl1.Controls.Add(this.textBoxCedula);
             this.panelControl1.Controls.Add(this.textBoxApellidos);
             this.panelControl1.Controls.Add(this.label7);
@@ -199,26 +206,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 1);
             this.panel1.TabIndex = 4;
-            // 
-            // textBoxCiudad
-            // 
-            this.textBoxCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCiudad.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxCiudad.Location = new System.Drawing.Point(305, 459);
-            this.textBoxCiudad.Name = "textBoxCiudad";
-            this.textBoxCiudad.Size = new System.Drawing.Size(196, 17);
-            this.textBoxCiudad.TabIndex = 2;
-            // 
-            // textBoxDepartamento
-            // 
-            this.textBoxDepartamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxDepartamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDepartamento.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxDepartamento.Location = new System.Drawing.Point(304, 391);
-            this.textBoxDepartamento.Name = "textBoxDepartamento";
-            this.textBoxDepartamento.Size = new System.Drawing.Size(196, 17);
-            this.textBoxDepartamento.TabIndex = 2;
             // 
             // textBoxCedula
             // 
@@ -335,6 +322,8 @@
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.Appearance.Options.UseBorderColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.comboBoxCarrera);
+            this.panelControl2.Controls.Add(this.comboBoxFacultad);
             this.panelControl2.Controls.Add(this.radioGroupBecado);
             this.panelControl2.Controls.Add(this.radioGroupTipoMatricula);
             this.panelControl2.Controls.Add(this.label8);
@@ -347,9 +336,7 @@
             this.panelControl2.Controls.Add(this.label11);
             this.panelControl2.Controls.Add(this.textBoxAnioEstudio);
             this.panelControl2.Controls.Add(this.label10);
-            this.panelControl2.Controls.Add(this.textBoxCarrera);
             this.panelControl2.Controls.Add(this.label9);
-            this.panelControl2.Controls.Add(this.textBoxFacultad);
             this.panelControl2.Location = new System.Drawing.Point(3, 528);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(641, 582);
@@ -465,6 +452,7 @@
             this.textBoxAnioEstudio.Name = "textBoxAnioEstudio";
             this.textBoxAnioEstudio.Size = new System.Drawing.Size(196, 17);
             this.textBoxAnioEstudio.TabIndex = 2;
+            this.textBoxAnioEstudio.Text = "0";
             // 
             // label10
             // 
@@ -476,16 +464,6 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Carrera";
             // 
-            // textBoxCarrera
-            // 
-            this.textBoxCarrera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxCarrera.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCarrera.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxCarrera.Location = new System.Drawing.Point(305, 223);
-            this.textBoxCarrera.Name = "textBoxCarrera";
-            this.textBoxCarrera.Size = new System.Drawing.Size(196, 17);
-            this.textBoxCarrera.TabIndex = 2;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -495,16 +473,6 @@
             this.label9.Size = new System.Drawing.Size(59, 17);
             this.label9.TabIndex = 2;
             this.label9.Text = "Facultad";
-            // 
-            // textBoxFacultad
-            // 
-            this.textBoxFacultad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxFacultad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFacultad.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxFacultad.Location = new System.Drawing.Point(305, 147);
-            this.textBoxFacultad.Name = "textBoxFacultad";
-            this.textBoxFacultad.Size = new System.Drawing.Size(196, 17);
-            this.textBoxFacultad.TabIndex = 2;
             // 
             // panelControl3
             // 
@@ -560,6 +528,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 17);
             this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "0";
             // 
             // radioGroup5
             // 
@@ -718,13 +687,109 @@
             this.label15.TabIndex = 2;
             this.label15.Text = "¿Usted ha usado el Sistema de Matricula en línea que le ofrece la Universidad?";
             // 
-            // Formulario
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(356, 18);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(145, 53);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Text = "Guardar";
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
+            // 
+            // comboBoxDepartamento
+            // 
+            this.comboBoxDepartamento.Location = new System.Drawing.Point(304, 388);
+            this.comboBoxDepartamento.Name = "comboBoxDepartamento";
+            this.comboBoxDepartamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxDepartamento.Properties.Items.AddRange(new object[] {
+            "Rivas",
+            "Rio San Juan",
+            "Nueva Segovia",
+            "Matagalpa",
+            "Masaya",
+            "Managua",
+            "Madriz",
+            "Leon",
+            "Jinotega",
+            "Granada",
+            "Esteli",
+            "Chontales",
+            "Chinandega",
+            "Carazo",
+            "Boaco",
+            "Atlantico Sur (RAAS)",
+            "Atlantico Norte (RAAN)"});
+            this.comboBoxDepartamento.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxDepartamento.Size = new System.Drawing.Size(197, 20);
+            this.comboBoxDepartamento.TabIndex = 37;
+            // 
+            // comboBoxCiudad
+            // 
+            this.comboBoxCiudad.Location = new System.Drawing.Point(305, 460);
+            this.comboBoxCiudad.Name = "comboBoxCiudad";
+            this.comboBoxCiudad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxCiudad.Properties.Items.AddRange(new object[] {
+            "Rivas",
+            "Rio San Juan",
+            "Nueva Segovia",
+            "Matagalpa",
+            "Masaya",
+            "Managua",
+            "Madriz",
+            "Leon",
+            "Jinotega",
+            "Granada",
+            "Esteli",
+            "Chontales",
+            "Chinandega",
+            "Carazo",
+            "Boaco",
+            "Atlantico Sur (RAAS)",
+            "Atlantico Norte (RAAN)"});
+            this.comboBoxCiudad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxCiudad.Size = new System.Drawing.Size(197, 20);
+            this.comboBoxCiudad.TabIndex = 38;
+            // 
+            // comboBoxFacultad
+            // 
+            this.comboBoxFacultad.Location = new System.Drawing.Point(305, 146);
+            this.comboBoxFacultad.Name = "comboBoxFacultad";
+            this.comboBoxFacultad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxFacultad.Properties.Items.AddRange(new object[] {
+            "Ciencias Medicas",
+            "Ciencias de la Educacion y Humanidades",
+            "Facultad de Odontología",
+            "Facultad de Ciencias Jurídicas y Sociales",
+            "Facultad de Ciencia y Tecnología",
+            "Facultad de Ciencias Ecónomicas Empresariales y Turísmo",
+            "Facultad de Ciencias Químicas",
+            "Escuela Ciencias Agrarías y Veterinarias"});
+            this.comboBoxFacultad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxFacultad.Size = new System.Drawing.Size(196, 20);
+            this.comboBoxFacultad.TabIndex = 22;
+            // 
+            // comboBoxCarrera
+            // 
+            this.comboBoxCarrera.Location = new System.Drawing.Point(305, 222);
+            this.comboBoxCarrera.Name = "comboBoxCarrera";
+            this.comboBoxCarrera.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxCarrera.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxCarrera.Size = new System.Drawing.Size(196, 20);
+            this.comboBoxCarrera.TabIndex = 23;
+            // 
+            // NewResultUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "Formulario";
+            this.Name = "NewResultUserControl";
             this.Size = new System.Drawing.Size(664, 456);
+            this.Load += new System.EventHandler(this.NewResultUserControl_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -743,6 +808,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -767,10 +836,8 @@
         private System.Windows.Forms.TextBox textBoxCedula;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBoxDepartamento;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBoxCiudad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
@@ -781,9 +848,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxAnioEstudio;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxCarrera;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxFacultad;
         private DevExpress.XtraEditors.RadioGroup radioGroupBecado;
         private DevExpress.XtraEditors.RadioGroup radioGroupTipoMatricula;
         private System.Windows.Forms.Label label13;
@@ -803,5 +868,10 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label15;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxDepartamento;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxCiudad;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxFacultad;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxCarrera;
     }
 }
