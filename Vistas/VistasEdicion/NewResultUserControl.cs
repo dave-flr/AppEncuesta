@@ -63,6 +63,9 @@ namespace DXApplication1.Vistas
 
         private void SimpleButton1_Click(object sender, EventArgs e)
         {// Guardar
+            if (NotEmptyFields()) {
+                return;
+            }
             int succes = -1;
             MySqlConnection temp;
             try
@@ -80,7 +83,7 @@ namespace DXApplication1.Vistas
 
                 cmd.Parameters.AddWithValue("I", textBoxNombres.Text);
                 cmd.Parameters.AddWithValue("II", textBoxApellidos.Text);
-                cmd.Parameters.AddWithValue("III", Convert.ToInt32(radioGroupSexo.SelectedIndex));//
+                cmd.Parameters.AddWithValue("III", radioGroupSexo.SelectedIndex);
                 cmd.Parameters.AddWithValue("IV", textBoxCedula.Text);
                 cmd.Parameters.AddWithValue("V", comboBoxDepartamento.SelectedIndex);
                 cmd.Parameters.AddWithValue("VI", comboBoxCiudad.SelectedIndex);
@@ -95,8 +98,6 @@ namespace DXApplication1.Vistas
                 cmd.Parameters.AddWithValue("XV", radioGroup4.SelectedIndex);
                 cmd.Parameters.AddWithValue("XVI", Convert.ToInt32(textBox1.Text));
                 cmd.Parameters.AddWithValue("XVII", radioGroup5.SelectedIndex);
-
-
 
                 succes = cmd.ExecuteNonQuery();
 
@@ -113,7 +114,23 @@ namespace DXApplication1.Vistas
                 MessageBox.Show("Error" + erro);
             }
         }
-
-        
+        private bool NotEmptyFields()
+        {
+            if (String.IsNullOrEmpty(textBoxNombres.Text) || String.IsNullOrEmpty(textBoxApellidos.Text)
+                || radioGroupSexo.SelectedIndex < 0 || String.IsNullOrEmpty(textBoxCedula.Text)
+                || comboBoxDepartamento.SelectedIndex < 0 || comboBoxCiudad.SelectedIndex < 0
+                || comboBoxFacultad.SelectedIndex < 0 || comboBoxCarrera.SelectedIndex < 0
+                || String.IsNullOrEmpty(textBoxAnioEstudio.Text) || radioGroupTipoMatricula.SelectedIndex < 0
+                || radioGroupBecado.SelectedIndex < 0 || radioGroup1.SelectedIndex < 0
+                || radioGroup2.SelectedIndex < 0 || radioGroup3.SelectedIndex < 0
+                || radioGroup4.SelectedIndex < 0 || String.IsNullOrEmpty(textBox1.Text)
+                || radioGroup5.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe llenar todos los datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }
