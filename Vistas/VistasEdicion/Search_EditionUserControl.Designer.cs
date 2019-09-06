@@ -102,6 +102,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.dataSet1 = new System.Data.DataSet();
+            this.dataSet2 = new System.Data.DataSet();
             this.xtraTabPage3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -137,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabPage3
@@ -1057,6 +1059,10 @@
             // 
             this.dataSet1.DataSetName = "NewDataSet";
             // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "NewDataSet";
+            // 
             // Search_EditionUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1104,6 +1110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1183,5 +1190,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxDepartamento;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxFacultad;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxCarrera;
+        private System.Data.DataSet dataSet2;
     }
 }

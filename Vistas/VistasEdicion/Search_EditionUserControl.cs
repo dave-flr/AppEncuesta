@@ -103,13 +103,14 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton1_Click(object sender, EventArgs e)
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas where IV= '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
+            dataSet2.Reset();
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas WHERE IV = '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
             DataTable table = new DataTable();
-            adapter.Fill(dataSet1);
+            adapter.Fill(dataSet2);
 
-            table = dataSet1.Tables[0];
+            table = dataSet2.Tables[0];
 
-            listRespuestas = Convertions.ConvertoToListResp(table);
+            List<Respuestas> listRespuestas2 = Convertions.ConvertoToListResp(table);
 
             table.Columns.Remove("numero");
             table.Columns.Remove("III");
@@ -126,8 +127,6 @@ namespace DXApplication1.Vistas.FormsEdition
             table.Columns.Remove("XV");
             table.Columns.Remove("XVI");
             table.Columns.Remove("XVII");
-
-            gridControl1.DataSource = table;
 
             gridControl1.DataSource = table;
         }
