@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -38,16 +39,25 @@ namespace DXApplication1.Classes
 
         public bool IsConnect()
         {
-            if (Connection == null)
+            try
             {
-                if (String.IsNullOrEmpty(databaseName))
-                    return false;
-                string connstring = string.Format("Server=localhost; database={0}; UID=root; password=00.dat", databaseName);
-                connection = new MySqlConnection(connstring);
-                connection.Open();
-            }
+                if (Connection == null)
+                {
+                    if (String.IsNullOrEmpty(databaseName))
+                        return false;
+                    string connstring = string.Format("Server=localhost; database={0}; UID=root; password=00.dat", databaseName);
+                    connection = new MySqlConnection(connstring);
+                    connection.Open();
+                }
 
-            return true;
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Hay un error con la base de datos", MessageBoxButtons.OK , MessageBoxIcon.Exclamation);
+                return false;
+            }
+            
         }
 
         public void Close()

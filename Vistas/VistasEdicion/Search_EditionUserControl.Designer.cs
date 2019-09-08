@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search_EditionUserControl));
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.comboBoxCiudad = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxDepartamento = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.label22 = new System.Windows.Forms.Label();
             this.textEditSearch = new DevExpress.XtraEditors.TextEdit();
             this.textEditFinal = new DevExpress.XtraEditors.TextEdit();
@@ -43,8 +49,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxCiudad = new System.Windows.Forms.TextBox();
-            this.textBoxDepartamento = new System.Windows.Forms.TextBox();
             this.textBoxCedula = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,6 +61,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.comboBoxCarrera = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxFacultad = new DevExpress.XtraEditors.ComboBoxEdit();
             this.radioGroupBecado = new DevExpress.XtraEditors.RadioGroup();
             this.radioGroupTipoMatricula = new DevExpress.XtraEditors.RadioGroup();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,9 +75,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxAnioEstudio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxCarrera = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxFacultad = new System.Windows.Forms.TextBox();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -96,21 +100,27 @@
             this.textBoxSearchCedula = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.itemDeleteInquest = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.dataSet1 = new System.Data.DataSet();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.dataSet2 = new System.Data.DataSet();
             this.xtraTabPage3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupBecado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupTipoMatricula.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -127,16 +137,17 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabPage3
             // 
+            this.xtraTabPage3.AllowTouchScroll = true;
             this.xtraTabPage3.Controls.Add(this.flowLayoutPanel1);
             this.xtraTabPage3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("xtraTabPage3.ImageOptions.SvgImage")));
             this.xtraTabPage3.Name = "xtraTabPage3";
@@ -158,6 +169,8 @@
             // panelControl3
             // 
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Controls.Add(this.comboBoxCiudad);
+            this.panelControl3.Controls.Add(this.comboBoxDepartamento);
             this.panelControl3.Controls.Add(this.groupControl1);
             this.panelControl3.Controls.Add(this.label22);
             this.panelControl3.Controls.Add(this.textEditSearch);
@@ -169,8 +182,6 @@
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Controls.Add(this.panel11);
             this.panelControl3.Controls.Add(this.panel1);
-            this.panelControl3.Controls.Add(this.textBoxCiudad);
-            this.panelControl3.Controls.Add(this.textBoxDepartamento);
             this.panelControl3.Controls.Add(this.textBoxCedula);
             this.panelControl3.Controls.Add(this.textBoxApellidos);
             this.panelControl3.Controls.Add(this.label7);
@@ -187,6 +198,108 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(497, 604);
             this.panelControl3.TabIndex = 0;
+            // 
+            // comboBoxCiudad
+            // 
+            this.comboBoxCiudad.Location = new System.Drawing.Point(246, 544);
+            this.comboBoxCiudad.Name = "comboBoxCiudad";
+            this.comboBoxCiudad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxCiudad.Properties.Items.AddRange(new object[] {
+            "Rivas",
+            "Rio San Juan",
+            "Nueva Segovia",
+            "Matagalpa",
+            "Masaya",
+            "Managua",
+            "Madriz",
+            "Leon",
+            "Jinotega",
+            "Granada",
+            "Esteli",
+            "Chontales",
+            "Chinandega",
+            "Carazo",
+            "Boaco",
+            "Atlantico Sur (RAAS)",
+            "Atlantico Norte (RAAN)"});
+            this.comboBoxCiudad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxCiudad.Size = new System.Drawing.Size(197, 20);
+            this.comboBoxCiudad.TabIndex = 37;
+            this.comboBoxCiudad.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDepartamento_SelectedIndexChanged);
+            // 
+            // comboBoxDepartamento
+            // 
+            this.comboBoxDepartamento.Location = new System.Drawing.Point(245, 476);
+            this.comboBoxDepartamento.Name = "comboBoxDepartamento";
+            this.comboBoxDepartamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxDepartamento.Properties.Items.AddRange(new object[] {
+            "Rivas",
+            "Rio San Juan",
+            "Nueva Segovia",
+            "Matagalpa",
+            "Masaya",
+            "Managua",
+            "Madriz",
+            "Leon",
+            "Jinotega",
+            "Granada",
+            "Esteli",
+            "Chontales",
+            "Chinandega",
+            "Carazo",
+            "Boaco",
+            "Atlantico Sur (RAAS)",
+            "Atlantico Norte (RAAN)"});
+            this.comboBoxDepartamento.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxDepartamento.Size = new System.Drawing.Size(197, 20);
+            this.comboBoxDepartamento.TabIndex = 36;
+            this.comboBoxDepartamento.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDepartamento_SelectedIndexChanged);
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl1.Appearance.Options.UseBackColor = true;
+            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl1.Controls.Add(this.simpleButton4);
+            this.groupControl1.Controls.Add(this.simpleButton3);
+            this.groupControl1.Controls.Add(this.simpleButton2);
+            this.groupControl1.Location = new System.Drawing.Point(179, 49);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(210, 76);
+            this.groupControl1.TabIndex = 35;
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Enabled = false;
+            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.simpleButton4.Location = new System.Drawing.Point(23, 32);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(174, 41);
+            this.simpleButton4.TabIndex = 36;
+            this.simpleButton4.Text = "Guardar Cambios";
+            this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.simpleButton3.Location = new System.Drawing.Point(101, 3);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton3.Size = new System.Drawing.Size(37, 23);
+            this.simpleButton3.TabIndex = 1;
+            this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(55, 3);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton2.Size = new System.Drawing.Size(40, 23);
+            this.simpleButton2.TabIndex = 0;
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // label22
             // 
@@ -250,6 +363,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Femenino")});
             this.radioGroupSexo.Size = new System.Drawing.Size(196, 68);
             this.radioGroupSexo.TabIndex = 28;
+            this.radioGroupSexo.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // panel5
             // 
@@ -299,26 +413,6 @@
             this.panel1.Size = new System.Drawing.Size(196, 1);
             this.panel1.TabIndex = 27;
             // 
-            // textBoxCiudad
-            // 
-            this.textBoxCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCiudad.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxCiudad.Location = new System.Drawing.Point(247, 546);
-            this.textBoxCiudad.Name = "textBoxCiudad";
-            this.textBoxCiudad.Size = new System.Drawing.Size(196, 17);
-            this.textBoxCiudad.TabIndex = 21;
-            // 
-            // textBoxDepartamento
-            // 
-            this.textBoxDepartamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxDepartamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDepartamento.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxDepartamento.Location = new System.Drawing.Point(246, 478);
-            this.textBoxDepartamento.Name = "textBoxDepartamento";
-            this.textBoxDepartamento.Size = new System.Drawing.Size(196, 17);
-            this.textBoxDepartamento.TabIndex = 20;
-            // 
             // textBoxCedula
             // 
             this.textBoxCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -328,6 +422,7 @@
             this.textBoxCedula.Name = "textBoxCedula";
             this.textBoxCedula.Size = new System.Drawing.Size(196, 17);
             this.textBoxCedula.TabIndex = 19;
+            this.textBoxCedula.TextChanged += new System.EventHandler(this.TextBoxNombres_TextChanged);
             // 
             // textBoxApellidos
             // 
@@ -338,6 +433,7 @@
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(196, 17);
             this.textBoxApellidos.TabIndex = 18;
+            this.textBoxApellidos.TextChanged += new System.EventHandler(this.TextBoxNombres_TextChanged);
             // 
             // label7
             // 
@@ -398,6 +494,7 @@
             this.textBoxNombres.Name = "textBoxNombres";
             this.textBoxNombres.Size = new System.Drawing.Size(196, 17);
             this.textBoxNombres.TabIndex = 10;
+            this.textBoxNombres.TextChanged += new System.EventHandler(this.TextBoxNombres_TextChanged);
             // 
             // label2
             // 
@@ -430,6 +527,8 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.comboBoxCarrera);
+            this.panelControl1.Controls.Add(this.comboBoxFacultad);
             this.panelControl1.Controls.Add(this.radioGroupBecado);
             this.panelControl1.Controls.Add(this.radioGroupTipoMatricula);
             this.panelControl1.Controls.Add(this.label8);
@@ -442,14 +541,43 @@
             this.panelControl1.Controls.Add(this.label11);
             this.panelControl1.Controls.Add(this.textBoxAnioEstudio);
             this.panelControl1.Controls.Add(this.label10);
-            this.panelControl1.Controls.Add(this.textBoxCarrera);
             this.panelControl1.Controls.Add(this.label9);
-            this.panelControl1.Controls.Add(this.textBoxFacultad);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(3, 613);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(496, 542);
             this.panelControl1.TabIndex = 0;
+            // 
+            // comboBoxCarrera
+            // 
+            this.comboBoxCarrera.Location = new System.Drawing.Point(246, 167);
+            this.comboBoxCarrera.Name = "comboBoxCarrera";
+            this.comboBoxCarrera.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxCarrera.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxCarrera.Size = new System.Drawing.Size(196, 20);
+            this.comboBoxCarrera.TabIndex = 21;
+            this.comboBoxCarrera.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDepartamento_SelectedIndexChanged);
+            // 
+            // comboBoxFacultad
+            // 
+            this.comboBoxFacultad.Location = new System.Drawing.Point(246, 91);
+            this.comboBoxFacultad.Name = "comboBoxFacultad";
+            this.comboBoxFacultad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxFacultad.Properties.Items.AddRange(new object[] {
+            "Ciencias Medicas",
+            "Ciencias de la Educacion y Humanidades",
+            "Facultad de Odontología",
+            "Facultad de Ciencias Jurídicas y Sociales",
+            "Facultad de Ciencia y Tecnología",
+            "Facultad de Ciencias Ecónomicas Empresariales y Turísmo",
+            "Facultad de Ciencias Químicas",
+            "Escuela Ciencias Agrarías y Veterinarias"});
+            this.comboBoxFacultad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxFacultad.Size = new System.Drawing.Size(196, 20);
+            this.comboBoxFacultad.TabIndex = 21;
+            this.comboBoxFacultad.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDepartamento_SelectedIndexChanged);
             // 
             // radioGroupBecado
             // 
@@ -465,6 +593,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Sin beca")});
             this.radioGroupBecado.Size = new System.Drawing.Size(120, 96);
             this.radioGroupBecado.TabIndex = 19;
+            this.radioGroupBecado.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // radioGroupTipoMatricula
             // 
@@ -479,6 +608,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Repitente")});
             this.radioGroupTipoMatricula.Size = new System.Drawing.Size(120, 81);
             this.radioGroupTipoMatricula.TabIndex = 20;
+            this.radioGroupTipoMatricula.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // label8
             // 
@@ -561,6 +691,7 @@
             this.textBoxAnioEstudio.Name = "textBoxAnioEstudio";
             this.textBoxAnioEstudio.Size = new System.Drawing.Size(196, 17);
             this.textBoxAnioEstudio.TabIndex = 11;
+            this.textBoxAnioEstudio.TextChanged += new System.EventHandler(this.TextBoxNombres_TextChanged);
             // 
             // label10
             // 
@@ -572,16 +703,6 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Carrera";
             // 
-            // textBoxCarrera
-            // 
-            this.textBoxCarrera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxCarrera.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCarrera.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxCarrera.Location = new System.Drawing.Point(246, 170);
-            this.textBoxCarrera.Name = "textBoxCarrera";
-            this.textBoxCarrera.Size = new System.Drawing.Size(196, 17);
-            this.textBoxCarrera.TabIndex = 13;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -591,16 +712,6 @@
             this.label9.Size = new System.Drawing.Size(59, 17);
             this.label9.TabIndex = 14;
             this.label9.Text = "Facultad";
-            // 
-            // textBoxFacultad
-            // 
-            this.textBoxFacultad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxFacultad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFacultad.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBoxFacultad.Location = new System.Drawing.Point(246, 94);
-            this.textBoxFacultad.Name = "textBoxFacultad";
-            this.textBoxFacultad.Size = new System.Drawing.Size(196, 17);
-            this.textBoxFacultad.TabIndex = 15;
             // 
             // panelControl2
             // 
@@ -742,6 +853,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 17);
             this.textBox1.TabIndex = 22;
+            this.textBox1.Click += new System.EventHandler(this.TextBoxNombres_TextChanged);
             // 
             // radioGroup5
             // 
@@ -757,6 +869,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Que de más información")});
             this.radioGroup5.Size = new System.Drawing.Size(195, 114);
             this.radioGroup5.TabIndex = 17;
+            this.radioGroup5.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // radioGroup4
             // 
@@ -771,6 +884,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Ahorrar tiempo")});
             this.radioGroup4.Size = new System.Drawing.Size(195, 96);
             this.radioGroup4.TabIndex = 18;
+            this.radioGroup4.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // radioGroup3
             // 
@@ -786,6 +900,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Nunca")});
             this.radioGroup3.Size = new System.Drawing.Size(120, 96);
             this.radioGroup3.TabIndex = 19;
+            this.radioGroup3.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // radioGroup2
             // 
@@ -802,6 +917,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Malo")});
             this.radioGroup2.Size = new System.Drawing.Size(120, 120);
             this.radioGroup2.TabIndex = 20;
+            this.radioGroup2.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // radioGroup1
             // 
@@ -817,6 +933,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Nunca")});
             this.radioGroup1.Size = new System.Drawing.Size(120, 96);
             this.radioGroup1.TabIndex = 21;
+            this.radioGroup1.Click += new System.EventHandler(this.RadioGroupSexo_Click);
             // 
             // label14
             // 
@@ -863,7 +980,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainer1.Size = new System.Drawing.Size(525, 460);
-            this.splitContainer1.SplitterDistance = 72;
+            this.splitContainer1.SplitterDistance = 109;
             this.splitContainer1.TabIndex = 0;
             // 
             // simpleButton1
@@ -911,20 +1028,38 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(525, 384);
+            this.gridControl1.Size = new System.Drawing.Size(525, 347);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemDeleteInquest});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 26);
+            // 
+            // itemDeleteInquest
+            // 
+            this.itemDeleteInquest.Name = "itemDeleteInquest";
+            this.itemDeleteInquest.Size = new System.Drawing.Size(117, 22);
+            this.itemDeleteInquest.Text = "Eliminar";
+            this.itemDeleteInquest.Click += new System.EventHandler(this.DeleteInquestToolStripMenuItem_Click);
             // 
             // gridView1
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
             this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.GridView1_RowClick);
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView1_RowCellClick);
             this.gridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick_1);
             // 
             // xtraTabControl1
@@ -946,35 +1081,9 @@
             // 
             this.dataSet1.DataSetName = "NewDataSet";
             // 
-            // groupControl1
+            // dataSet2
             // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.groupControl1.Controls.Add(this.simpleButton3);
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Location = new System.Drawing.Point(179, 70);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(200, 33);
-            this.groupControl1.TabIndex = 35;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 0;
-            this.simpleButton2.Text = "simpleButton2";
-            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Location = new System.Drawing.Point(122, 3);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 1;
-            this.simpleButton3.Text = "simpleButton3";
-            this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
+            this.dataSet2.DataSetName = "NewDataSet";
             // 
             // Search_EditionUserControl
             // 
@@ -989,12 +1098,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupBecado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupTipoMatricula.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -1013,12 +1128,12 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1038,8 +1153,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxCiudad;
-        private System.Windows.Forms.TextBox textBoxDepartamento;
         private System.Windows.Forms.TextBox textBoxCedula;
         private System.Windows.Forms.TextBox textBoxApellidos;
         private System.Windows.Forms.Label label7;
@@ -1064,9 +1177,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxAnioEstudio;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxCarrera;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxFacultad;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
@@ -1097,5 +1208,13 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxCiudad;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxDepartamento;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxFacultad;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxCarrera;
+        private System.Data.DataSet dataSet2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem itemDeleteInquest;
     }
 }

@@ -2,6 +2,7 @@
 using DevExpress.XtraEditors;
 using DXApplication1.Vistas;
 using DXApplication1.Classes;
+using DXApplication1.Vistas.VistasEdicion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -174,8 +175,9 @@ namespace DXApplication1
 
         }
 
-        
-
-        
+        private void AccordionControlElement57_Click(object sender, EventArgs e)
+        {// Exportar
+            ChangeView(new ExportTool());
+        }
     }
 }
