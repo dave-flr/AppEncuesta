@@ -149,7 +149,7 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void GridView1_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show("YES");
+            //MessageBox.Show("YES");
         }
 
         private void GridView1_DoubleClick_1(object sender, EventArgs e)
