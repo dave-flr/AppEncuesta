@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewResultUserControl));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.comboBoxCiudad = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxDepartamento = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.radioGroupSexo = new DevExpress.XtraEditors.RadioGroup();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -49,6 +52,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.comboBoxCarrera = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxFacultad = new DevExpress.XtraEditors.ComboBoxEdit();
             this.radioGroupBecado = new DevExpress.XtraEditors.RadioGroup();
             this.radioGroupTipoMatricula = new DevExpress.XtraEditors.RadioGroup();
             this.label8 = new System.Windows.Forms.Label();
@@ -79,17 +84,17 @@
             this.label16 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxDepartamento = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxCiudad = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxFacultad = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxCarrera = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupBecado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupTipoMatricula.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -99,10 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -150,6 +151,72 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(641, 519);
             this.panelControl1.TabIndex = 0;
+            // 
+            // comboBoxCiudad
+            // 
+            this.comboBoxCiudad.Location = new System.Drawing.Point(305, 460);
+            this.comboBoxCiudad.Name = "comboBoxCiudad";
+            this.comboBoxCiudad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxCiudad.Properties.Items.AddRange(new object[] {
+            "Rivas",
+            "Rio San Juan",
+            "Nueva Segovia",
+            "Matagalpa",
+            "Masaya",
+            "Managua",
+            "Madriz",
+            "Leon",
+            "Jinotega",
+            "Granada",
+            "Esteli",
+            "Chontales",
+            "Chinandega",
+            "Carazo",
+            "Boaco",
+            "Atlantico Sur (RAAS)",
+            "Atlantico Norte (RAAN)"});
+            this.comboBoxCiudad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxCiudad.Size = new System.Drawing.Size(197, 20);
+            this.comboBoxCiudad.TabIndex = 38;
+            // 
+            // comboBoxDepartamento
+            // 
+            this.comboBoxDepartamento.Location = new System.Drawing.Point(304, 388);
+            this.comboBoxDepartamento.Name = "comboBoxDepartamento";
+            this.comboBoxDepartamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxDepartamento.Properties.Items.AddRange(new object[] {
+            "Rivas",
+            "Rio San Juan",
+            "Nueva Segovia",
+            "Matagalpa",
+            "Masaya",
+            "Managua",
+            "Madriz",
+            "Leon",
+            "Jinotega",
+            "Granada",
+            "Esteli",
+            "Chontales",
+            "Chinandega",
+            "Carazo",
+            "Boaco",
+            "Atlantico Sur (RAAS)",
+            "Atlantico Norte (RAAN)"});
+            this.comboBoxDepartamento.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxDepartamento.Size = new System.Drawing.Size(197, 20);
+            this.comboBoxDepartamento.TabIndex = 37;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(583, 11);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton1.Size = new System.Drawing.Size(44, 47);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // radioGroupSexo
             // 
@@ -342,6 +409,35 @@
             this.panelControl2.Size = new System.Drawing.Size(641, 582);
             this.panelControl2.TabIndex = 0;
             // 
+            // comboBoxCarrera
+            // 
+            this.comboBoxCarrera.Location = new System.Drawing.Point(305, 222);
+            this.comboBoxCarrera.Name = "comboBoxCarrera";
+            this.comboBoxCarrera.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxCarrera.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxCarrera.Size = new System.Drawing.Size(196, 20);
+            this.comboBoxCarrera.TabIndex = 23;
+            // 
+            // comboBoxFacultad
+            // 
+            this.comboBoxFacultad.Location = new System.Drawing.Point(305, 146);
+            this.comboBoxFacultad.Name = "comboBoxFacultad";
+            this.comboBoxFacultad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxFacultad.Properties.Items.AddRange(new object[] {
+            "Ciencias Medicas",
+            "Ciencias de la Educacion y Humanidades",
+            "Facultad de Odontología",
+            "Facultad de Ciencias Jurídicas y Sociales",
+            "Facultad de Ciencia y Tecnología",
+            "Facultad de Ciencias Ecónomicas Empresariales y Turísmo",
+            "Facultad de Ciencias Químicas",
+            "Escuela Ciencias Agrarías y Veterinarias"});
+            this.comboBoxFacultad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxFacultad.Size = new System.Drawing.Size(196, 20);
+            this.comboBoxFacultad.TabIndex = 22;
+            // 
             // radioGroupBecado
             // 
             this.radioGroupBecado.Location = new System.Drawing.Point(305, 470);
@@ -481,6 +577,7 @@
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.label20);
             this.panelControl3.Controls.Add(this.panel9);
+            this.panelControl3.Controls.Add(this.simpleButton2);
             this.panelControl3.Controls.Add(this.textBox1);
             this.panelControl3.Controls.Add(this.radioGroup5);
             this.panelControl3.Controls.Add(this.radioGroup4);
@@ -687,100 +784,15 @@
             this.label15.TabIndex = 2;
             this.label15.Text = "¿Usted ha usado el Sistema de Matricula en línea que le ofrece la Universidad?";
             // 
-            // simpleButton1
+            // simpleButton2
             // 
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(356, 18);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(145, 53);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Guardar";
-            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
-            // 
-            // comboBoxDepartamento
-            // 
-            this.comboBoxDepartamento.Location = new System.Drawing.Point(304, 388);
-            this.comboBoxDepartamento.Name = "comboBoxDepartamento";
-            this.comboBoxDepartamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxDepartamento.Properties.Items.AddRange(new object[] {
-            "Rivas",
-            "Rio San Juan",
-            "Nueva Segovia",
-            "Matagalpa",
-            "Masaya",
-            "Managua",
-            "Madriz",
-            "Leon",
-            "Jinotega",
-            "Granada",
-            "Esteli",
-            "Chontales",
-            "Chinandega",
-            "Carazo",
-            "Boaco",
-            "Atlantico Sur (RAAS)",
-            "Atlantico Norte (RAAN)"});
-            this.comboBoxDepartamento.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxDepartamento.Size = new System.Drawing.Size(197, 20);
-            this.comboBoxDepartamento.TabIndex = 37;
-            // 
-            // comboBoxCiudad
-            // 
-            this.comboBoxCiudad.Location = new System.Drawing.Point(305, 460);
-            this.comboBoxCiudad.Name = "comboBoxCiudad";
-            this.comboBoxCiudad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxCiudad.Properties.Items.AddRange(new object[] {
-            "Rivas",
-            "Rio San Juan",
-            "Nueva Segovia",
-            "Matagalpa",
-            "Masaya",
-            "Managua",
-            "Madriz",
-            "Leon",
-            "Jinotega",
-            "Granada",
-            "Esteli",
-            "Chontales",
-            "Chinandega",
-            "Carazo",
-            "Boaco",
-            "Atlantico Sur (RAAS)",
-            "Atlantico Norte (RAAN)"});
-            this.comboBoxCiudad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxCiudad.Size = new System.Drawing.Size(197, 20);
-            this.comboBoxCiudad.TabIndex = 38;
-            // 
-            // comboBoxFacultad
-            // 
-            this.comboBoxFacultad.Location = new System.Drawing.Point(305, 146);
-            this.comboBoxFacultad.Name = "comboBoxFacultad";
-            this.comboBoxFacultad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxFacultad.Properties.Items.AddRange(new object[] {
-            "Ciencias Medicas",
-            "Ciencias de la Educacion y Humanidades",
-            "Facultad de Odontología",
-            "Facultad de Ciencias Jurídicas y Sociales",
-            "Facultad de Ciencia y Tecnología",
-            "Facultad de Ciencias Ecónomicas Empresariales y Turísmo",
-            "Facultad de Ciencias Químicas",
-            "Escuela Ciencias Agrarías y Veterinarias"});
-            this.comboBoxFacultad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxFacultad.Size = new System.Drawing.Size(196, 20);
-            this.comboBoxFacultad.TabIndex = 22;
-            // 
-            // comboBoxCarrera
-            // 
-            this.comboBoxCarrera.Location = new System.Drawing.Point(305, 222);
-            this.comboBoxCarrera.Name = "comboBoxCarrera";
-            this.comboBoxCarrera.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxCarrera.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxCarrera.Size = new System.Drawing.Size(196, 20);
-            this.comboBoxCarrera.TabIndex = 23;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(583, 1123);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton2.Size = new System.Drawing.Size(44, 47);
+            this.simpleButton2.TabIndex = 6;
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // NewResultUserControl
             // 
@@ -794,10 +806,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupBecado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupTipoMatricula.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
@@ -808,10 +824,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxFacultad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxCarrera.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -873,5 +885,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxCiudad;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxFacultad;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxCarrera;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

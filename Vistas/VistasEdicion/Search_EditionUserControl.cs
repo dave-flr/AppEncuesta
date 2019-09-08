@@ -43,7 +43,8 @@ namespace DXApplication1.Vistas.FormsEdition
 
             fill();
             LoadCombo();
-            fillFields(listRespuestas[Contador]);
+            if(listRespuestas.Count > 0)
+                fillFields(listRespuestas[Contador]);
             simpleButton4.Enabled = false;
         }
 
@@ -169,7 +170,7 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton2_Click(object sender, EventArgs e)
         {//Anterior
-            if (Contador > 0)
+            if (listRespuestas.Count > 0 && Contador > 0)
             {
                 Contador--;
                 fillFields(listRespuestas[Contador]);
@@ -179,7 +180,12 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton3_Click(object sender, EventArgs e)
         {//Siguiente
-            if (Contador >= 0 && Contador < listRespuestas.Count-1)
+            SiguienteEncuesta();
+        }
+
+        public void SiguienteEncuesta()
+        {
+            if (listRespuestas.Count > 0 && Contador >= 0 && Contador < listRespuestas.Count - 1)
             {
                 Contador++;
                 fillFields(listRespuestas[Contador]);
@@ -193,6 +199,8 @@ namespace DXApplication1.Vistas.FormsEdition
         }
 
         private void fillFields(Respuestas result) {
+            if(result == null) return;
+
             textEditSearch.Text = (Contador+1).ToString();
             textEditFinal.Text = listRespuestas.Count.ToString();
 
@@ -222,7 +230,39 @@ namespace DXApplication1.Vistas.FormsEdition
             textBox1.Text = result.Xvi.ToString();
 
             radioGroup5.SelectedIndex = result.Xvii;
+        }
 
+        private void blankFields()
+        {
+            textEditSearch.Text = "";
+            textEditFinal.Text = "";
+
+            textBoxNombres.Text = "";
+            textBoxApellidos.Text = "";
+            radioGroupSexo.SelectedIndex = -1;
+            textBoxCedula.Text = "";
+
+            /*comboBoxDepartamento.SelectedIndex = returnValue(result.V, TableNames.returnTableName(5));
+            textBoxCiudad.Text = returnValue(result.Vi, TableNames.returnTableName(6));
+            textBoxFacultad.Text = returnValue(result.Vii, TableNames.returnTableName(7));
+            textBoxCarrera.Text = returnValue(result.Viii, TableNames.returnTableName(8));*/
+
+            comboBoxDepartamento.SelectedIndex = -1;
+            comboBoxCiudad.SelectedIndex = -1;
+            comboBoxFacultad.SelectedIndex = -1;
+            comboBoxCarrera.SelectedIndex = -1;
+
+            textBoxAnioEstudio.Text = "";
+            radioGroupTipoMatricula.SelectedIndex = -1;
+            radioGroupBecado.SelectedIndex = -1;
+            radioGroup1.SelectedIndex = -1;
+            radioGroup2.SelectedIndex = -1;
+            radioGroup3.SelectedIndex = -1;
+            radioGroup4.SelectedIndex = -1;
+
+            textBox1.Text = "";
+
+            radioGroup5.SelectedIndex = -1;
         }
 
         private int returnValue(int key, string tableName) { //Un solo metodo para todas las consultas
@@ -267,6 +307,8 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton4_Click(object sender, EventArgs e)
         {//Boton guardar cambios
+            if (listRespuestas.Count == 0) return;
+
             int succes = -1;
             int save = ++Contador;
             try
@@ -385,6 +427,40 @@ namespace DXApplication1.Vistas.FormsEdition
             if (columNumeroValue > 0)
             {
                 DeleteInquestByNumero(columNumeroValue);
+            }
+        }
+
+        private void TextEditFinal_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        private void BtnEliminarEncuesta_Click(object sender, EventArgs e)
+        {
+            if (listRespuestas.Count == 0)
+            {
+                MessageBox.Show("No existen datos encuestas ingresadas");
+                return;
+            }
+
+            DeleteInquestByNumero(listRespuestas[Contador].Numero);
+            int index = Contador > 0 ? Contador-- : 0;
+            
+            if (listRespuestas.Count > 0)
+            {
+                listRespuestas.RemoveAt(index);
+                System.Console.WriteLine(index);
+                System.Console.WriteLine(listRespuestas.Count);
+
+                if (index == listRespuestas.Count)
+                    fillFields(listRespuestas[index - 1]);
+                else
+                    fillFields(listRespuestas[index]);
+            }
+            else
+            {
+                blankFields();
             }
         }
     }
