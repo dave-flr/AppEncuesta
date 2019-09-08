@@ -111,6 +111,9 @@ namespace DXApplication1.Vistas.FormsEdition
 
             table = dataSet2.Tables[0];
 
+            if (table.Rows.Count == 0) return;
+            
+
             List<Respuestas> listRespuestas2 = Convertions.ConvertoToListResp(table);
 
             //table.Columns.Remove("numero");
@@ -134,6 +137,7 @@ namespace DXApplication1.Vistas.FormsEdition
 
 
         private void fill() {
+            dataSet1.Reset();
             MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas", dbConnection.Connection);
             DataTable table = new DataTable();
             adapter.Fill(dataSet1);
@@ -141,8 +145,6 @@ namespace DXApplication1.Vistas.FormsEdition
             table = dataSet1.Tables[0];
 
             listRespuestas = Convertions.ConvertoToListResp(table);
-
-
         }
 
 
@@ -389,10 +391,48 @@ namespace DXApplication1.Vistas.FormsEdition
                 DeleteInquestByNumero(columNumeroValue);
                 gridView1.DeleteSelectedRows();
                 gridControl1.DataSource = null;
+
+                listRespuestas = null;
+                fill();
+                if (listRespuestas.Count > 0)
+                {
+                    fillFields(listRespuestas[0]);
+                    Contador = 0;
+                    textEditSearch.Text = (Contador + 1).ToString();
+                } else
+                {
+                    blankFields();
+                }
+                MessageBox.Show("Campo borrado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
-            fill();
-            MessageBox.Show("Campo borrado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void blankFields()
+        {
+            textEditSearch.Text = "";
+            textEditFinal.Text = "";
+
+            textBoxNombres.Text = "";
+            textBoxApellidos.Text = "";
+            radioGroupSexo.SelectedIndex = -1;
+            textBoxCedula.Text = "";
+
+            comboBoxDepartamento.SelectedIndex = -1;
+            comboBoxCiudad.SelectedIndex = -1;
+            comboBoxFacultad.SelectedIndex = -1;
+            comboBoxCarrera.SelectedIndex = -1;
+
+            textBoxAnioEstudio.Text = "";
+            radioGroupTipoMatricula.SelectedIndex = -1;
+            radioGroupBecado.SelectedIndex = -1;
+            radioGroup1.SelectedIndex = -1;
+            radioGroup2.SelectedIndex = -1;
+            radioGroup3.SelectedIndex = -1;
+            radioGroup4.SelectedIndex = -1;
+
+            textBox1.Text = "";
+
+            radioGroup5.SelectedIndex = -1;
         }
     }
 }
