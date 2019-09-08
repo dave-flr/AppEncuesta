@@ -282,7 +282,7 @@
             this.textBoxCedula.Location = new System.Drawing.Point(304, 320);
             this.textBoxCedula.Name = "textBoxCedula";
             this.textBoxCedula.Size = new System.Drawing.Size(196, 17);
-            this.textBoxCedula.TabIndex = 2;
+            this.textBoxCedula.TabIndex = 3;
             // 
             // textBoxApellidos
             // 
@@ -451,7 +451,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Residente"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Sin beca")});
             this.radioGroupBecado.Size = new System.Drawing.Size(120, 96);
-            this.radioGroupBecado.TabIndex = 5;
+            this.radioGroupBecado.TabIndex = 0;
             // 
             // radioGroupTipoMatricula
             // 
@@ -465,7 +465,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Reingreso"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Repitente")});
             this.radioGroupTipoMatricula.Size = new System.Drawing.Size(120, 81);
-            this.radioGroupTipoMatricula.TabIndex = 5;
+            this.radioGroupTipoMatricula.TabIndex = 0;
             // 
             // label8
             // 
@@ -547,7 +547,7 @@
             this.textBoxAnioEstudio.Location = new System.Drawing.Point(305, 288);
             this.textBoxAnioEstudio.Name = "textBoxAnioEstudio";
             this.textBoxAnioEstudio.Size = new System.Drawing.Size(196, 17);
-            this.textBoxAnioEstudio.TabIndex = 2;
+            this.textBoxAnioEstudio.TabIndex = 4;
             this.textBoxAnioEstudio.Text = "0";
             // 
             // label10
@@ -624,7 +624,7 @@
             this.textBox1.Location = new System.Drawing.Point(260, 849);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 17);
-            this.textBox1.TabIndex = 6;
+            this.textBox1.TabIndex = 5;
             this.textBox1.Text = "0";
             // 
             // radioGroup5
@@ -640,7 +640,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Que funcione con mayor facilidad y rapidez"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Que de más información")});
             this.radioGroup5.Size = new System.Drawing.Size(195, 114);
-            this.radioGroup5.TabIndex = 5;
+            this.radioGroup5.TabIndex = 0;
             // 
             // radioGroup4
             // 
@@ -654,7 +654,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Mayor facilidad para matricularse"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Ahorrar tiempo")});
             this.radioGroup4.Size = new System.Drawing.Size(195, 96);
-            this.radioGroup4.TabIndex = 5;
+            this.radioGroup4.TabIndex = 0;
             // 
             // radioGroup3
             // 
@@ -669,7 +669,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Raras veces"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Nunca")});
             this.radioGroup3.Size = new System.Drawing.Size(120, 96);
-            this.radioGroup3.TabIndex = 5;
+            this.radioGroup3.TabIndex = 0;
             // 
             // label21
             // 
@@ -733,7 +733,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(3)), "Casi nunca"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(4)), "Nunca")});
             this.radioGroup1.Size = new System.Drawing.Size(120, 96);
-            this.radioGroup1.TabIndex = 5;
+            this.radioGroup1.TabIndex = 0;
             // 
             // label17
             // 
