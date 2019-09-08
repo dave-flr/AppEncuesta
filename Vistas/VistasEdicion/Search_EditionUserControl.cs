@@ -20,6 +20,7 @@ namespace DXApplication1.Vistas.FormsEdition
     {
         private DB dbConnection = null;
         private int Contador = 0;
+        private int indicatorRowIndex = 0;
         List<Respuestas> listRespuestas;
 
         public Search_EditionUserControl()
@@ -112,7 +113,7 @@ namespace DXApplication1.Vistas.FormsEdition
 
             List<Respuestas> listRespuestas2 = Convertions.ConvertoToListResp(table);
 
-            table.Columns.Remove("numero");
+            //table.Columns.Remove("numero");
             table.Columns.Remove("III");
             table.Columns.Remove("V");
             table.Columns.Remove("VI");
@@ -319,6 +320,72 @@ namespace DXApplication1.Vistas.FormsEdition
         private void ComboBoxDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             enableSaveButton();
+        }
+
+        private void GridView1_RowClick(object sender, RowClickEventArgs e)
+        {
+
+        }
+
+        private void GridView1_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                contextMenuStrip1.Show();
+                indicatorRowIndex = gridView1.GetDataSourceRowIndex(e.RowHandle);
+            }
+        }
+
+        // Funcion para obtener el valor
+        private int getColumnNumeroValue()
+        {
+            var valor = gridView1.GetRowCellValue(indicatorRowIndex, "numero");
+            if (valor == null)
+                return -1;
+            else
+                return (int)valor;
+        }
+
+        public void DeleteInquestByNumero(int numero)
+        {
+            int succes = -1;
+            try
+            {
+                dbConnection.IsConnect();
+                MySqlConnection temp = dbConnection.Connection;
+                temp.Open();
+
+                MySqlCommand cmd = temp.CreateCommand();
+                cmd.CommandText = String.Format("delete from respuestas where numero = {0}", numero);
+                cmd.ExecuteNonQuery();
+
+                succes = cmd.ExecuteNonQuery();
+
+                if (succes < 0)
+                {
+                    MessageBox.Show("Error al insertar en la base de datos");
+                }
+
+                temp.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Error" + erro);
+                //return null;
+            }
+        }
+
+        private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void DeleteInquestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int columNumeroValue = getColumnNumeroValue();
+            if (columNumeroValue > 0)
+            {
+                DeleteInquestByNumero(columNumeroValue);
+            }
         }
     }
 }
