@@ -428,6 +428,7 @@ namespace DXApplication1.Vistas.FormsEdition
             {
                 DeleteInquestByNumero(columNumeroValue);
                 gridControl1.DataSource = null;
+                MessageBox.Show(String.Format("Encuesta numero: " + columNumeroValue + ", eliminada correctamente"));
             }
         }
 
@@ -441,7 +442,7 @@ namespace DXApplication1.Vistas.FormsEdition
         {
             if (listRespuestas.Count == 0)
             {
-                MessageBox.Show("No existen datos encuestas ingresadas");
+                MessageBox.Show("No existen encuestas ingresadas");
                 return;
             }
 
@@ -460,6 +461,11 @@ namespace DXApplication1.Vistas.FormsEdition
             {
                 blankFields();
             }
+        }
+
+        private void ContextMenuStrip1_Opening_1(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

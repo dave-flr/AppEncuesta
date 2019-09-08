@@ -33,14 +33,21 @@
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEliminarEncuesta = new DevExpress.XtraEditors.SimpleButton();
             this.comboBoxCiudad = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxDepartamento = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textEditSearch = new DevExpress.XtraEditors.TextEdit();
+            this.textEditFinal = new DevExpress.XtraEditors.TextEdit();
             this.radioGroupSexo = new DevExpress.XtraEditors.RadioGroup();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxCedula = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
@@ -99,19 +106,14 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.dataSet1 = new System.Data.DataSet();
             this.dataSet2 = new System.Data.DataSet();
-            this.btnEliminarEncuesta = new DevExpress.XtraEditors.SimpleButton();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.textEditFinal = new DevExpress.XtraEditors.TextEdit();
-            this.textEditSearch = new DevExpress.XtraEditors.TextEdit();
-            this.label22 = new System.Windows.Forms.Label();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -139,8 +141,6 @@
             this.xtraTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabPage3
@@ -200,6 +200,54 @@
             this.panelControl3.Size = new System.Drawing.Size(497, 604);
             this.panelControl3.TabIndex = 0;
             // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.simpleButton3.Location = new System.Drawing.Point(238, 64);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton3.Size = new System.Drawing.Size(37, 23);
+            this.simpleButton3.TabIndex = 1;
+            this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Enabled = false;
+            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.simpleButton4.Location = new System.Drawing.Point(354, 61);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton4.Size = new System.Drawing.Size(130, 41);
+            this.simpleButton4.TabIndex = 36;
+            this.simpleButton4.Text = "Guardar Cambios";
+            this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(185, 64);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton2.Size = new System.Drawing.Size(40, 23);
+            this.simpleButton2.TabIndex = 0;
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
+            // 
+            // btnEliminarEncuesta
+            // 
+            this.btnEliminarEncuesta.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.btnEliminarEncuesta.Appearance.Options.UseBorderColor = true;
+            this.btnEliminarEncuesta.AppearanceDisabled.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.btnEliminarEncuesta.AppearanceDisabled.Options.UseBorderColor = true;
+            this.btnEliminarEncuesta.AutoSize = true;
+            this.btnEliminarEncuesta.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEliminarEncuesta.ImageOptions.SvgImage")));
+            this.btnEliminarEncuesta.Location = new System.Drawing.Point(354, 15);
+            this.btnEliminarEncuesta.Name = "btnEliminarEncuesta";
+            this.btnEliminarEncuesta.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnEliminarEncuesta.Size = new System.Drawing.Size(125, 36);
+            this.btnEliminarEncuesta.TabIndex = 38;
+            this.btnEliminarEncuesta.Text = "Eliminar encuesta";
+            this.btnEliminarEncuesta.Click += new System.EventHandler(this.BtnEliminarEncuesta_Click);
+            // 
             // comboBoxCiudad
             // 
             this.comboBoxCiudad.Location = new System.Drawing.Point(246, 544);
@@ -258,17 +306,53 @@
             this.comboBoxDepartamento.TabIndex = 36;
             this.comboBoxDepartamento.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDepartamento_SelectedIndexChanged);
             // 
-            // simpleButton4
+            // label22
             // 
-            this.simpleButton4.Enabled = false;
-            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(354, 61);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton4.Size = new System.Drawing.Size(130, 41);
-            this.simpleButton4.TabIndex = 36;
-            this.simpleButton4.Text = "Guardar Cambios";
-            this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label22.Location = new System.Drawing.Point(218, 26);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(23, 17);
+            this.label22.TabIndex = 32;
+            this.label22.Text = "de";
+            // 
+            // textEditSearch
+            // 
+            this.textEditSearch.EditValue = "";
+            this.textEditSearch.Location = new System.Drawing.Point(160, 22);
+            this.textEditSearch.Name = "textEditSearch";
+            this.textEditSearch.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.textEditSearch.Properties.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.textEditSearch.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.textEditSearch.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.textEditSearch.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.textEditSearch.Properties.Appearance.Options.UseBackColor = true;
+            this.textEditSearch.Properties.Appearance.Options.UseBorderColor = true;
+            this.textEditSearch.Properties.Appearance.Options.UseFont = true;
+            this.textEditSearch.Properties.Appearance.Options.UseForeColor = true;
+            this.textEditSearch.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEditSearch.Size = new System.Drawing.Size(54, 24);
+            this.textEditSearch.TabIndex = 31;
+            // 
+            // textEditFinal
+            // 
+            this.textEditFinal.EditValue = "";
+            this.textEditFinal.Enabled = false;
+            this.textEditFinal.Location = new System.Drawing.Point(249, 22);
+            this.textEditFinal.Name = "textEditFinal";
+            this.textEditFinal.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEditFinal.Properties.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.textEditFinal.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.textEditFinal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.textEditFinal.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.textEditFinal.Properties.Appearance.Options.UseBackColor = true;
+            this.textEditFinal.Properties.Appearance.Options.UseBorderColor = true;
+            this.textEditFinal.Properties.Appearance.Options.UseFont = true;
+            this.textEditFinal.Properties.Appearance.Options.UseForeColor = true;
+            this.textEditFinal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEditFinal.Size = new System.Drawing.Size(54, 24);
+            this.textEditFinal.TabIndex = 30;
+            this.textEditFinal.EditValueChanged += new System.EventHandler(this.TextEditFinal_EditValueChanged);
             // 
             // radioGroupSexo
             // 
@@ -318,6 +402,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(196, 1);
             this.panel2.TabIndex = 23;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.panel11.Location = new System.Drawing.Point(162, 46);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(50, 1);
+            this.panel11.TabIndex = 22;
             // 
             // panel1
             // 
@@ -958,12 +1050,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemDeleteInquest});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip1_Opening_1);
             // 
             // itemDeleteInquest
             // 
             this.itemDeleteInquest.Name = "itemDeleteInquest";
-            this.itemDeleteInquest.Size = new System.Drawing.Size(117, 22);
+            this.itemDeleteInquest.Size = new System.Drawing.Size(180, 22);
             this.itemDeleteInquest.Text = "Eliminar";
             this.itemDeleteInquest.Click += new System.EventHandler(this.DeleteInquestToolStripMenuItem_Click);
             // 
@@ -1000,98 +1093,6 @@
             // 
             this.dataSet2.DataSetName = "NewDataSet";
             // 
-            // btnEliminarEncuesta
-            // 
-            this.btnEliminarEncuesta.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.btnEliminarEncuesta.Appearance.Options.UseBorderColor = true;
-            this.btnEliminarEncuesta.AppearanceDisabled.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.btnEliminarEncuesta.AppearanceDisabled.Options.UseBorderColor = true;
-            this.btnEliminarEncuesta.AutoSize = true;
-            this.btnEliminarEncuesta.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
-            this.btnEliminarEncuesta.Location = new System.Drawing.Point(354, 15);
-            this.btnEliminarEncuesta.Name = "btnEliminarEncuesta";
-            this.btnEliminarEncuesta.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnEliminarEncuesta.Size = new System.Drawing.Size(125, 36);
-            this.btnEliminarEncuesta.TabIndex = 38;
-            this.btnEliminarEncuesta.Text = "Eliminar encuesta";
-            this.btnEliminarEncuesta.Click += new System.EventHandler(this.BtnEliminarEncuesta_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.panel11.Location = new System.Drawing.Point(162, 46);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(50, 1);
-            this.panel11.TabIndex = 22;
-            // 
-            // textEditFinal
-            // 
-            this.textEditFinal.EditValue = "";
-            this.textEditFinal.Enabled = false;
-            this.textEditFinal.Location = new System.Drawing.Point(249, 22);
-            this.textEditFinal.Name = "textEditFinal";
-            this.textEditFinal.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEditFinal.Properties.Appearance.BackColor2 = System.Drawing.Color.Transparent;
-            this.textEditFinal.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.textEditFinal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textEditFinal.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.textEditFinal.Properties.Appearance.Options.UseBackColor = true;
-            this.textEditFinal.Properties.Appearance.Options.UseBorderColor = true;
-            this.textEditFinal.Properties.Appearance.Options.UseFont = true;
-            this.textEditFinal.Properties.Appearance.Options.UseForeColor = true;
-            this.textEditFinal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEditFinal.Size = new System.Drawing.Size(54, 24);
-            this.textEditFinal.TabIndex = 30;
-            this.textEditFinal.EditValueChanged += new System.EventHandler(this.TextEditFinal_EditValueChanged);
-            // 
-            // textEditSearch
-            // 
-            this.textEditSearch.EditValue = "";
-            this.textEditSearch.Location = new System.Drawing.Point(160, 22);
-            this.textEditSearch.Name = "textEditSearch";
-            this.textEditSearch.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.textEditSearch.Properties.Appearance.BackColor2 = System.Drawing.Color.Transparent;
-            this.textEditSearch.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.textEditSearch.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textEditSearch.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.textEditSearch.Properties.Appearance.Options.UseBackColor = true;
-            this.textEditSearch.Properties.Appearance.Options.UseBorderColor = true;
-            this.textEditSearch.Properties.Appearance.Options.UseFont = true;
-            this.textEditSearch.Properties.Appearance.Options.UseForeColor = true;
-            this.textEditSearch.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEditSearch.Size = new System.Drawing.Size(54, 24);
-            this.textEditSearch.TabIndex = 31;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label22.Location = new System.Drawing.Point(218, 26);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(23, 17);
-            this.label22.TabIndex = 32;
-            this.label22.Text = "de";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(185, 64);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton2.Size = new System.Drawing.Size(40, 23);
-            this.simpleButton2.TabIndex = 0;
-            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.Location = new System.Drawing.Point(238, 64);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton3.Size = new System.Drawing.Size(37, 23);
-            this.simpleButton3.TabIndex = 1;
-            this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
-            // 
             // Search_EditionUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1107,6 +1108,8 @@
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxCiudad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDepartamento.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -1137,8 +1140,6 @@
             this.xtraTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditFinal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
