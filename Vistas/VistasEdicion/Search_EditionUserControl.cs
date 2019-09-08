@@ -427,6 +427,7 @@ namespace DXApplication1.Vistas.FormsEdition
             if (columNumeroValue > 0)
             {
                 DeleteInquestByNumero(columNumeroValue);
+                gridControl1.DataSource = null;
             }
         }
 
@@ -446,13 +447,10 @@ namespace DXApplication1.Vistas.FormsEdition
 
             DeleteInquestByNumero(listRespuestas[Contador].Numero);
             int index = Contador > 0 ? Contador-- : 0;
-            
+            listRespuestas.RemoveAt(index);
+
             if (listRespuestas.Count > 0)
             {
-                listRespuestas.RemoveAt(index);
-                System.Console.WriteLine(index);
-                System.Console.WriteLine(listRespuestas.Count);
-
                 if (index == listRespuestas.Count)
                     fillFields(listRespuestas[index - 1]);
                 else
