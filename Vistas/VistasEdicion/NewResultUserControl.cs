@@ -103,15 +103,16 @@ namespace DXApplication1.Vistas
 
                 if (succes < 0)
                 {
-                    MessageBox.Show("Error al insertar en la base de datos");
+                    MessageBox.Show("Error al insertar en la base de datos","Advertencia",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 temp.Close();
                 simpleButton1.Enabled = false;
+                MessageBox.Show("Respuesta guardada Correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Error" + erro);
+                MessageBox.Show("Error" + erro, "Advertencia",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private bool NotEmptyFields()

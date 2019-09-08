@@ -268,7 +268,6 @@ namespace DXApplication1.Vistas.FormsEdition
         private void SimpleButton4_Click(object sender, EventArgs e)
         {//Boton guardar cambios
             int succes = -1;
-            int save = ++Contador;
             try
             {
                 dbConnection.IsConnect();
@@ -296,7 +295,7 @@ namespace DXApplication1.Vistas.FormsEdition
                 cmd.Parameters.AddWithValue("XV", radioGroup4.SelectedIndex);
                 cmd.Parameters.AddWithValue("XVI", Convert.ToInt32(textBox1.Text));
                 cmd.Parameters.AddWithValue("XVII", radioGroup5.SelectedIndex);
-                cmd.Parameters.AddWithValue("save", save);
+                cmd.Parameters.AddWithValue("save", listRespuestas[Contador].Numero);
 
 
 
@@ -309,11 +308,11 @@ namespace DXApplication1.Vistas.FormsEdition
 
                 temp.Close();
                 simpleButton4.Enabled = false;
+                MessageBox.Show("Respuesta editada correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Error" + erro);
-                //return null;
+                MessageBox.Show("Error al actualizar la base de datos","Error" + erro);
             }
         }
 
@@ -363,14 +362,14 @@ namespace DXApplication1.Vistas.FormsEdition
 
                 if (succes < 0)
                 {
-                    MessageBox.Show("Error al insertar en la base de datos");
+                    MessageBox.Show("Error al insertar en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 temp.Close();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Error" + erro);
+                MessageBox.Show("Error" + erro, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //return null;
             }
         }
@@ -386,6 +385,10 @@ namespace DXApplication1.Vistas.FormsEdition
             {
                 DeleteInquestByNumero(columNumeroValue);
             }
+
+            gridView1.DeleteSelectedRows();
+            fill();
+            MessageBox.Show("Campo borrado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
