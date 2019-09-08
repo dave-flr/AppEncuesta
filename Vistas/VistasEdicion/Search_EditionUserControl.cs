@@ -169,7 +169,7 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton2_Click(object sender, EventArgs e)
         {//Anterior
-            if (Contador > 0)
+            if (listRespuestas.Count > 0 && Contador > 0)
             {
                 Contador--;
                 fillFields(listRespuestas[Contador]);
@@ -193,6 +193,7 @@ namespace DXApplication1.Vistas.FormsEdition
         }
 
         private void fillFields(Respuestas result) {
+            if (result == null) return;
             textEditSearch.Text = (Contador+1).ToString();
             textEditFinal.Text = listRespuestas.Count.ToString();
 
@@ -267,6 +268,8 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void SimpleButton4_Click(object sender, EventArgs e)
         {//Boton guardar cambios
+            if (listRespuestas.Count == 0) return;
+
             int succes = -1;
             try
             {
@@ -384,9 +387,10 @@ namespace DXApplication1.Vistas.FormsEdition
             if (columNumeroValue > 0)
             {
                 DeleteInquestByNumero(columNumeroValue);
+                gridView1.DeleteSelectedRows();
+                gridControl1.DataSource = null;
             }
-
-            gridView1.DeleteSelectedRows();
+            
             fill();
             MessageBox.Show("Campo borrado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
