@@ -39,25 +39,21 @@ namespace DXApplication1
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            AuthForm auth = new AuthForm();
+            while (auth.ShowDialog() != DialogResult.OK)
+            {
+                if (MessageBox.Show("Credenciales Incorrectas", "No se pudo conectar a la base de datos", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation) == DialogResult.Cancel)
+                {
+                    this.Close();
+                }
+            }
+
             accordionControlElement1.Expanded = false;
             accordionControlElement7.Expanded = false;
             accordionControlElement2.Expanded = false;
             accordionControlElement5.Expanded = false;
             accordionControlElement6.Expanded = false;
 
-            connect();
-        }
-
-        private void connect()
-        {
-            var db = DB.Instance();
-            db.DatabaseName = "encuesta";
-
-            if (!db.IsConnect())
-            {
-                this.Close();
-            }
-            db.Close();
         }
 
         private void AccordionControlElement9_Click(object sender, EventArgs e)
