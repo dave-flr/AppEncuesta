@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
+using Npgsql;
 
 namespace DXApplication1.Classes
 {
@@ -27,15 +22,15 @@ namespace DXApplication1.Classes
         }
 
         public string Password { get; set; }
-        private MySqlConnection connection = null;
-        public MySqlConnection Connection
+
+        private NpgsqlConnection connection = null;
+        public NpgsqlConnection Connection
         {
             get { return connection; }
         }
 
         public string ServerName { get => serverName; set => serverName = value; }
         public string UserName { get => userName; set => userName = value; }
-        public string Password1 { get => password; set => password = value; }
 
         private static DB _instance = null;
         public static DB Instance()
@@ -54,13 +49,13 @@ namespace DXApplication1.Classes
                     if (String.IsNullOrEmpty(databaseName) || String.IsNullOrEmpty(serverName) || String.IsNullOrEmpty(userName) || String.IsNullOrEmpty(password))
                         return false;
                     string connstring = string.Format("Server={0}; database={1}; UID={2}; password={3}", serverName, databaseName, userName, password);
-                    connection = new MySqlConnection(connstring);
+                    connection = new NpgsqlConnection(connstring);
                     connection.Open();
                 }
 
                 return true;
             }
-            catch (MySqlException ex)
+            catch (NpgsqlException ex)
             {
                 MessageBox.Show(ex.Message, "Hay un error con la base de datos", MessageBoxButtons.OK , MessageBoxIcon.Exclamation);
                 connection.Close();
@@ -70,7 +65,6 @@ namespace DXApplication1.Classes
             }
             
         }
-
         public void Close()
         {
             connection.Close();

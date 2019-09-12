@@ -34,7 +34,7 @@ namespace DXApplication1.Vistas
             var db = DB.Instance();
             db.ServerName = serverNameTextEdit.Text;
             db.UserName = userNameTextEdit.Text;
-            db.Password1 = passwordTextEdit.Text;
+            db.Password = passwordTextEdit.Text;
             db.DatabaseName = "encuesta";
 
             if (!db.IsConnect())

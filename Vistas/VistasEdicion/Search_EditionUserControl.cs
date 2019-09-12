@@ -1,17 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using DXApplication1.Classes;
-using MySql.Data.MySqlClient;
-using DevExpress.Utils;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using Npgsql;
 using DevExpress.XtraGrid.Views.Grid;
 
 namespace DXApplication1.Vistas.FormsEdition
@@ -52,24 +45,23 @@ namespace DXApplication1.Vistas.FormsEdition
             try
             {
                 dbConnection.IsConnect();
-                MySqlConnection temp = dbConnection.Connection;
+                NpgsqlConnection temp = dbConnection.Connection;
                 temp.Open();
-                MySqlCommand cmd = temp.CreateCommand();
+                NpgsqlCommand cmd = temp.CreateCommand();
                 cmd.CommandText = ("SELECT valor From viii_carrera");
 
-                MySqlDataReader reader = cmd.ExecuteReader();
+                NpgsqlDataReader reader = cmd.ExecuteReader();
                 int i = 0;
                 while (reader.Read())
                 {
-                    comboBoxCarrera.Properties.Items.Add(reader.GetString(0));
-                    i++;
+                    comboBoxCarrera.Properties.Items.Add(reader.GetString(0)); i++;
                 }
 
                 temp.Close();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Error" + erro);
+                MessageBox.Show("Error" + erro, "Hay un error con la base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -105,7 +97,7 @@ namespace DXApplication1.Vistas.FormsEdition
         private void SimpleButton1_Click(object sender, EventArgs e)
         {
             dataSet2.Reset();
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas WHERE IV = '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
+            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT * FROM respuestas WHERE IV = '" + textBoxSearchCedula.Text + "'", dbConnection.Connection);
             DataTable table = new DataTable();
             adapter.Fill(dataSet2);
 
@@ -138,7 +130,7 @@ namespace DXApplication1.Vistas.FormsEdition
 
         private void fill() {
             dataSet1.Reset();
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas", dbConnection.Connection);
+            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT * FROM respuestas", dbConnection.Connection);
             DataTable table = new DataTable();
             adapter.Fill(dataSet1);
 
@@ -232,12 +224,12 @@ namespace DXApplication1.Vistas.FormsEdition
             int Value = -1;
             try{
                 dbConnection.IsConnect();
-                MySqlConnection temp = dbConnection.Connection;
+                NpgsqlConnection temp = dbConnection.Connection;
                 temp.Open();
-                MySqlCommand cmd = temp.CreateCommand();
+                NpgsqlCommand cmd = temp.CreateCommand();
                 cmd.CommandText = ("SELECT clave From " + tableName + " INNER JOIN respuestas WHERE clave = " + key + " GROUP BY valor");
 
-                MySqlDataReader reader = cmd.ExecuteReader();
+                NpgsqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -248,7 +240,7 @@ namespace DXApplication1.Vistas.FormsEdition
                 return Value;
             }
             catch (Exception erro){
-                MessageBox.Show("Error" + erro);
+                MessageBox.Show("Error" + erro, "Hay un error con la base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
         }
@@ -276,11 +268,11 @@ namespace DXApplication1.Vistas.FormsEdition
             try
             {
                 dbConnection.IsConnect();
-                MySqlConnection temp = dbConnection.Connection;
+                NpgsqlConnection temp = dbConnection.Connection;
                 temp.Open();
 
 
-                MySqlCommand cmd = temp.CreateCommand();
+                NpgsqlCommand cmd = temp.CreateCommand();
                 cmd.CommandText = ("UPDATE `encuesta`.`respuestas` SET `I` = @I, `II` = @II, `III` = @III, `IV` = @IV, `V` = @V, `VI` = @VI, `VII` = @VII, `VIII` = @VIII, `IX` = @IX, `X` = @X, `XI` = @XI, `XII` = @XII, `XIII` = @XIII, `XIV` = @XIV, `XV` = @XV, `XVI` = @XVI, `XVII` = @XVII WHERE `numero` = @save");
 
                 cmd.Parameters.AddWithValue("I", textBoxNombres.Text);
@@ -356,10 +348,10 @@ namespace DXApplication1.Vistas.FormsEdition
             try
             {
                 dbConnection.IsConnect();
-                MySqlConnection temp = dbConnection.Connection;
+                NpgsqlConnection temp = dbConnection.Connection;
                 temp.Open();
 
-                MySqlCommand cmd = temp.CreateCommand();
+                NpgsqlCommand cmd = temp.CreateCommand();
                 cmd.CommandText = String.Format("delete from respuestas where numero = {0}", numero);
                 cmd.ExecuteNonQuery();
 

@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using DXApplication1.Classes;
-using MySql.Data.MySqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using DevExpress.XtraGrid.Views.Grid;
 using System.Diagnostics;
+using Npgsql;
 
 namespace DXApplication1.Vistas.VistasEdicion
 {
@@ -29,7 +21,7 @@ namespace DXApplication1.Vistas.VistasEdicion
             if (!dbConnection.IsConnect())
                 MessageBox.Show("Hay un error con la base de Datos", "Información");
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM respuestas", dbConnection.Connection);
+            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT * FROM respuestas", dbConnection.Connection);
             DataTable table = new DataTable();
             adapter.Fill(dataSet1);
 

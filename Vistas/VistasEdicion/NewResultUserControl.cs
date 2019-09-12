@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using DXApplication1.Classes;
-using MySql.Data.MySqlClient;
+using Npgsql;
 
 namespace DXApplication1.Vistas
 {
@@ -40,12 +33,12 @@ namespace DXApplication1.Vistas
             try
             {
                 dbConnection.IsConnect();
-                MySqlConnection temp = dbConnection.Connection;
+                NpgsqlConnection temp = dbConnection.Connection;
                 temp.Open();
-                MySqlCommand cmd = temp.CreateCommand();
+                NpgsqlCommand cmd = temp.CreateCommand();
                 cmd.CommandText = ("SELECT valor From viii_carrera");
 
-                MySqlDataReader reader = cmd.ExecuteReader();
+                NpgsqlDataReader reader = cmd.ExecuteReader();
                 int i = 0;
                 while (reader.Read())
                 {
@@ -67,7 +60,7 @@ namespace DXApplication1.Vistas
                 return;
             }
             int succes = -1;
-            MySqlConnection temp;
+            NpgsqlConnection temp;
             try
             {
                 dbConnection.IsConnect();
@@ -78,7 +71,7 @@ namespace DXApplication1.Vistas
                 }
 
 
-                MySqlCommand cmd = temp.CreateCommand();
+                NpgsqlCommand cmd = temp.CreateCommand();
                 cmd.CommandText = ("INSERT INTO `encuesta`.`respuestas`(`I`, `II`, `III`, `IV`, `V`, `VI`, `VII`, `VIII`, `IX`, `X`, `XI`, `XII`, `XIII`, `XIV`, `XV`, `XVI`, `XVII`) VALUES (@I, @II, @III, @IV, @V, @VI, @VII, @VIII, @IX, @X, @XI, @XII, @XIII, @XIV, @XV, @XVI, @XVII)");
 
                 cmd.Parameters.AddWithValue("I", textBoxNombres.Text);
