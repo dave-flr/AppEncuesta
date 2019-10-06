@@ -72,7 +72,7 @@ namespace DXApplication1.Vistas
 
 
                 NpgsqlCommand cmd = temp.CreateCommand();
-                cmd.CommandText = ("INSERT INTO `encuesta`.`respuestas`(`I`, `II`, `III`, `IV`, `V`, `VI`, `VII`, `VIII`, `IX`, `X`, `XI`, `XII`, `XIII`, `XIV`, `XV`, `XVI`, `XVII`) VALUES (@I, @II, @III, @IV, @V, @VI, @VII, @VIII, @IX, @X, @XI, @XII, @XIII, @XIV, @XV, @XVI, @XVII)");
+                cmd.CommandText = ("INSERT INTO \"public\".\"respuestas\"(\"I\", \"II\", \"III\", \"IV\", \"V\", \"VI\", \"VII\", \"VIII\", \"IX\", \"X\", \"XI\", \"XII\", \"XIII\", \"XIV\", \"XV\", \"XVI\", \"XVII\") VALUES (@I, @II, @III, @IV, @V, @VI, @VII, @VIII, @IX, @X, @XI, @XII, @XIII, @XIV, @XV, @XVI, @XVII)");
 
                 cmd.Parameters.AddWithValue("I", textBoxNombres.Text);
                 cmd.Parameters.AddWithValue("II", textBoxApellidos.Text);
@@ -105,7 +105,7 @@ namespace DXApplication1.Vistas
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Error" + erro, "Advertencia",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + erro.Message, "Advertencia",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private bool NotEmptyFields()
