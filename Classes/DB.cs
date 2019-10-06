@@ -21,7 +21,7 @@ namespace DXApplication1.Classes
             set { databaseName = value; }
         }
 
-        public string Password { get; set; }
+        public string Password { get { return password; } set { password = value; } }
 
         private NpgsqlConnection connection = null;
         public NpgsqlConnection Connection
